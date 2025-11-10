@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 320">
+  <defs>
+    <style>
+      .aventora-text { font-family: Arial, sans-serif; font-weight: bold; fill: #2B58A0; }
+      .international-text { font-family: Arial, sans-serif; font-weight: normal; fill: #FF6F4E; letter-spacing: 12px; }
+    </style>
+  </defs>
+  
+  <!-- Blue circular logo mark with white arrow -->
+  <circle cx="160" cy="160" r="150" fill="#2B58A0"/>
+  <path d="M160 50 L80 200 L160 150 L240 200 Z" fill="white"/>
+  
+  <!-- aventora text -->
+  <text x="350" y="140" class="aventora-text" font-size="120">aventora</text>
+  
+  <!-- INTERNATIONAL text -->
+  <text x="350" y="200" class="international-text" font-size="32">INTERNATIONAL</text>
+</svg>

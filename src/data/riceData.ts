@@ -1,0 +1,664 @@
+export interface RiceProduct {
+  id: string;
+  name: string;
+  slug: string;
+  scientificName?: string;
+  purity: string;
+  sortex: string;
+  averageGrainLength: string;
+  moisture: string;
+  placeOfOrigin: string;
+  damageDiscolored: string;
+  broken: string;
+  foreignMatter: string;
+  chalkyGrains?: string;
+  color?: string;
+  packing: string;
+  image: string;
+  gallery: string[];
+  category: 'basmati' | 'non-basmati';
+  variety: string;
+  type: 'raw' | 'steam' | 'golden-sella' | 'white-sella' | 'parboiled';
+}
+
+export interface RiceVariety {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  products: RiceProduct[];
+}
+
+export interface RiceSection {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  varieties: RiceVariety[];
+}
+
+export interface RiceData {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  icon: string;
+  image: string;
+  sections: RiceSection[];
+}
+
+// Helper function to generate slug from name
+const generateSlug = (name: string): string => {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+};
+
+// Rice products data
+const riceProducts: RiceProduct[] = [
+  // 1121 Basmati Rice varieties
+  {
+    id: '1121-raw-basmati',
+    name: '1121 RAW Basmati Rice',
+    slug: generateSlug('1121 RAW Basmati Rice'),
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm & 8.35mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1121',
+    type: 'raw'
+  },
+  {
+    id: '1121-steam-basmati',
+    name: '1121 STEAM Basmati Rice',
+    slug: generateSlug('1121 STEAM Basmati Rice'),
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm & 8.35mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1121',
+    type: 'steam'
+  },
+  {
+    id: '1121-golden-sella-basmati',
+    name: '1121 GOLDEN SELLA Basmati Rice',
+    slug: generateSlug('1121 GOLDEN SELLA Basmati Rice'),
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm & 8.35mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1121',
+    type: 'golden-sella'
+  },
+  {
+    id: '1121-white-sella-basmati',
+    name: '1121 WHITE SELLA Basmati Rice',
+    slug: generateSlug('1121 WHITE SELLA Basmati Rice'),
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm & 8.35mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1121',
+    type: 'white-sella'
+  },
+  // 1509 Basmati Rice varieties
+  {
+    id: '1509-steam-basmati',
+    name: '1509 STEAM Basmati Rice',
+    slug: generateSlug('1509 STEAM Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1509',
+    type: 'steam'
+  },
+  {
+    id: '1509-golden-sella-basmati',
+    name: '1509 GOLDEN SELLA Basmati Rice',
+    slug: generateSlug('1509 GOLDEN SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1509',
+    type: 'golden-sella'
+  },
+  {
+    id: '1509-white-sella-basmati',
+    name: '1509 WHITE SELLA Basmati Rice',
+    slug: generateSlug('1509 WHITE SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1509',
+    type: 'white-sella'
+  },
+  // 1401 Basmati Rice varieties
+  {
+    id: '1401-steam-basmati',
+    name: '1401 STEAM Basmati Rice',
+    slug: generateSlug('1401 STEAM Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1401',
+    type: 'steam'
+  },
+  {
+    id: '1401-golden-sella-basmati',
+    name: '1401 GOLDEN SELLA Basmati Rice',
+    slug: generateSlug('1401 GOLDEN SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1401',
+    type: 'golden-sella'
+  },
+  {
+    id: '1401-white-sella-basmati',
+    name: '1401 WHITE SELLA Basmati Rice',
+    slug: generateSlug('1401 WHITE SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '8.3mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: '1401',
+    type: 'white-sella'
+  },
+  // Sugandha Basmati Rice varieties
+  {
+    id: 'sugandha-steam-basmati',
+    name: 'SUGANDHA STEAM Basmati Rice',
+    slug: generateSlug('SUGANDHA STEAM Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '7.75mm – 7.90mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: 'sugandha',
+    type: 'steam'
+  },
+  {
+    id: 'sugandha-golden-sella-basmati',
+    name: 'SUGANDHA GOLDEN SELLA Basmati Rice',
+    slug: generateSlug('SUGANDHA GOLDEN SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '7.75mm – 7.90mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: 'sugandha',
+    type: 'golden-sella'
+  },
+  {
+    id: 'sugandha-white-sella-basmati',
+    name: 'SUGANDHA WHITE SELLA Basmati Rice',
+    slug: generateSlug('SUGANDHA WHITE SELLA Basmati Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '99% Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '7.75mm – 7.90mm',
+    moisture: '12% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '1% – 2% Max',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'basmati',
+    variety: 'sugandha',
+    type: 'white-sella'
+  },
+  // PR-11/PR-14 Non-Basmati Rice varieties
+  {
+    id: 'pr-11-14-raw',
+    name: 'PR-11 / PR-14 Raw Rice',
+    slug: generateSlug('PR-11 / PR-14 Raw Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '6.80–7.00 mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '2%–5% (as per requirement)',
+    foreignMatter: 'Nil',
+    chalkyGrains: '5% Max',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'pr-11-14',
+    type: 'raw'
+  },
+  {
+    id: 'pr-11-14-steam',
+    name: 'PR-11 / PR-14 Steam Rice',
+    slug: generateSlug('PR-11 / PR-14 Steam Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '6.90 mm',
+    moisture: '13% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '1% Max',
+    broken: '2%–5% as required',
+    foreignMatter: 'Nil',
+    chalkyGrains: 'Nil / Very Low',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'pr-11-14',
+    type: 'steam'
+  },
+  {
+    id: 'pr-11-14-golden-sella',
+    name: 'PR-11 / PR-14 Golden Sella Rice',
+    slug: generateSlug('PR-11 / PR-14 Golden Sella Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '6.90 mm',
+    moisture: '12%–13% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '2%–5% as per buyer need',
+    foreignMatter: 'Nil',
+    color: 'Natural Golden Yellow',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'pr-11-14',
+    type: 'golden-sella'
+  },
+  {
+    id: 'pr-11-14-white-sella',
+    name: 'PR-11 / PR-14 White Sella Rice',
+    slug: generateSlug('PR-11 / PR-14 White Sella Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '6.90 mm',
+    moisture: '12%–13% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '2%–5% as per requirement',
+    foreignMatter: 'Nil',
+    color: 'Natural White / Creamy White',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'pr-11-14',
+    type: 'white-sella'
+  },
+  // IR-64 Rice varieties
+  {
+    id: 'ir-64-5-broken-parboiled',
+    name: 'IR-64 5% Broken Parboiled Rice',
+    slug: generateSlug('IR-64 5% Broken Parboiled Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.8mm – 6.0mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '5% Max',
+    foreignMatter: 'Nil',
+    color: 'Parboiled Light Yellow / Golden',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'ir-64',
+    type: 'parboiled'
+  },
+  {
+    id: 'ir-64-5-broken-raw',
+    name: 'IR-64 5% Broken Raw Rice',
+    slug: generateSlug('IR-64 5% Broken Raw Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.8mm – 6.0mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '5% Max',
+    foreignMatter: 'Nil',
+    color: 'Natural White',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'ir-64',
+    type: 'raw'
+  },
+  {
+    id: 'ir-64-25-broken-parboiled',
+    name: 'IR-64 25% Broken Parboiled Rice',
+    slug: generateSlug('IR-64 25% Broken Parboiled Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.8mm – 6.0mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '25% Max',
+    foreignMatter: 'Nil',
+    color: 'Parboiled Light Yellow / Golden',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'ir-64',
+    type: 'parboiled'
+  },
+  {
+    id: 'ir-64-25-broken-raw',
+    name: 'IR-64 25% Broken Raw Rice',
+    slug: generateSlug('IR-64 25% Broken Raw Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.8mm – 6.0mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '25% Max',
+    foreignMatter: 'Nil',
+    color: 'Natural White',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'ir-64',
+    type: 'raw'
+  },
+  // Sona Masoori Rice varieties
+  {
+    id: 'sona-masoori-raw',
+    name: 'Sona Masoori Raw Rice',
+    slug: generateSlug('Sona Masoori Raw Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.20mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '5% Max (or as per requirement)',
+    foreignMatter: 'Nil',
+    chalkyGrains: '5% Max',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'sona-masoori',
+    type: 'raw'
+  },
+  {
+    id: 'sona-masoori-steam',
+    name: 'Sona Masoori Steam Rice',
+    slug: generateSlug('Sona Masoori Steam Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum or As Per Customer Requirement',
+    sortex: '100%',
+    averageGrainLength: '5.20mm',
+    moisture: '13% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: '5% Max (or as required)',
+    foreignMatter: 'Nil',
+    color: 'Natural Steam Polished White',
+    packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'sona-masoori',
+    type: 'steam'
+  },
+  // Swarna Rice varieties
+  {
+    id: 'swarna-raw',
+    name: 'Swarna RAW Rice',
+    slug: generateSlug('Swarna RAW Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '5.20mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: 'As per requirement',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'swarna',
+    type: 'raw'
+  },
+  {
+    id: 'swarna-parboiled',
+    name: 'Swarna PARBOILED Rice',
+    slug: generateSlug('Swarna PARBOILED Rice'),
+    scientificName: 'Oryza Sativa',
+    purity: '92% Minimum Or As Per Customer\'s Requirements',
+    sortex: '100%',
+    averageGrainLength: '5.20mm',
+    moisture: '14% Max',
+    placeOfOrigin: 'India',
+    damageDiscolored: '0.5% Max',
+    broken: 'As per requirement',
+    foreignMatter: 'Nil',
+    packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
+    image: '/api/placeholder/400/300',
+    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    category: 'non-basmati',
+    variety: 'swarna',
+    type: 'parboiled'
+  }
+];
+
+// Group products by variety
+const groupProductsByVariety = (products: RiceProduct[], category: 'basmati' | 'non-basmati'): RiceVariety[] => {
+  const varietyMap = new Map<string, RiceProduct[]>();
+  
+  products
+    .filter(product => product.category === category)
+    .forEach(product => {
+      const variety = product.variety;
+      if (!varietyMap.has(variety)) {
+        varietyMap.set(variety, []);
+      }
+      varietyMap.get(variety)!.push(product);
+    });
+  
+  return Array.from(varietyMap.entries()).map(([variety, products]) => {
+    const varietyName = variety === '1121' ? '1121 Basmati Rice' :
+                      variety === '1509' ? '1509 Basmati Rice' :
+                      variety === '1401' ? '1401 Basmati Rice' :
+                      variety === 'sugandha' ? 'Sugandha Basmati Rice' :
+                      variety === 'pr-11-14' ? 'PR-11/PR-14 Rice' :
+                      variety === 'ir-64' ? 'IR-64 Rice' :
+                      variety === 'sona-masoori' ? 'Sona Masoori Rice' :
+                      variety === 'swarna' ? 'Swarna Rice' :
+                      variety;
+    
+    const descriptions = {
+      '1121': 'Premium long-grain aromatic Basmati rice with exceptional cooking quality.',
+      '1509': 'High-quality 1509 Basmati rice variety with excellent aroma and taste.',
+      '1401': 'Traditional 1401 Basmati rice variety known for its authentic flavor.',
+      'sugandha': 'Aromatic Sugandha Basmati rice with distinctive fragrance.',
+      'pr-11-14': 'Premium quality PR-11/PR-14 Non-Basmati rice variety.',
+      'ir-64': 'High-yield IR-64 rice variety suitable for various cooking applications.',
+      'sona-masoori': 'Premium Sona Masoori rice variety, lightweight and aromatic.',
+      'swarna': 'High-quality Swarna rice variety with excellent cooking properties.'
+    };
+    
+    return {
+      id: `${variety}-variety`,
+      name: varietyName,
+      slug: generateSlug(varietyName),
+      description: descriptions[variety as keyof typeof descriptions] || `Premium ${varietyName} variety.`,
+      products: products.sort((a, b) => {
+        const order = ['raw', 'steam', 'golden-sella', 'white-sella', 'parboiled'];
+        return order.indexOf(a.type) - order.indexOf(b.type);
+      })
+    };
+  });
+};
+
+// Export the main rice data
+export const riceData: RiceData = {
+  id: 'rice',
+  name: 'Rice',
+  slug: 'rice',
+  description: 'Premium Basmati and Non-Basmati rice varieties from India.',
+  icon: '🌾',
+  image: '/api/placeholder/600/400',
+  sections: [
+    {
+      id: 'basmati-rice',
+      name: 'Basmati Rice',
+      slug: 'basmati-rice',
+      description: 'World-renowned aromatic Basmati rice varieties with exceptional fragrance and long grains.',
+      varieties: groupProductsByVariety(riceProducts, 'basmati')
+    },
+    {
+      id: 'non-basmati-rice',
+      name: 'Non-Basmati Rice',
+      slug: 'non-basmati-rice',
+      description: 'High-quality Non-Basmati rice varieties for various culinary applications and export markets.',
+      varieties: groupProductsByVariety(riceProducts, 'non-basmati')
+    }
+  ]
+};
+
+// Export individual products for detail pages
+export const getAllRiceProducts = (): RiceProduct[] => riceProducts;
+
+// Get product by slug
+export const getRiceProductBySlug = (slug: string): RiceProduct | undefined => {
+  return riceProducts.find(product => product.slug === slug);
+};
+
+// Get products by variety
+export const getRiceProductsByVariety = (variety: string): RiceProduct[] => {
+  return riceProducts.filter(product => product.variety === variety);
+};
+
+// Get products by category
+export const getRiceProductsByCategory = (category: 'basmati' | 'non-basmati'): RiceProduct[] => {
+  return riceProducts.filter(product => product.category === category);
+};
