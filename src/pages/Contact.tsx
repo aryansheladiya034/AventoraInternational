@@ -50,13 +50,27 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Get in touch with our team to discuss your global trade needs
-          </p>
+      {/* Hero Section with Background Image */}
+      <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/Baki na pages ma.jfif')` }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Contact Us</h1>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Get in touch with our team to discuss your global trade needs
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
       <section className="py-16 bg-white">
@@ -226,9 +240,9 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                    <p className="text-gray-600">123 Trade Center Building</p>
-                    <p className="text-gray-600">Global Business District</p>
-                    <p className="text-gray-600">International City, IC 12345</p>
+                    <p className="text-gray-600">A-216, Royal Plaza</p>
+                    <p className="text-gray-600">Bapasitaram Chowk, BTRS Road</p>
+                    <p className="text-gray-600">Simada Gam, Surat - 395006</p>
                   </div>
                 </div>
 
@@ -270,7 +284,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                     <Facebook className="h-6 w-6 text-white" />
                   </a>
                   <a
-                    href="https://instagram.com"
+                    href="https://www.instagram.com/aventora_international?igsh=dDd0d2ttbjU4ejVi"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#2B58A0] p-3 rounded-lg hover:bg-[#1e3f70] transition-colors"

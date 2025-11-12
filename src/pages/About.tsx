@@ -28,13 +28,27 @@ const About: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Your trusted partner in global trade since 2019
-          </p>
+      {/* Hero Section with Background Image */}
+      <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/Baki na pages ma.jfif')` }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">About Us</h1>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Your trusted partner in global trade since 2019
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
       <section className="py-16 bg-white">
@@ -58,8 +72,8 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/images/global-delivery.jpg" 
-                  alt="Global Delivery Network" 
+                  src="/animation_lkkr6r5o_medium.gif" 
+                  alt="Team Collaboration and Business Growth" 
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -170,7 +184,7 @@ const About: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-[#FF6F4E] hover:bg-[#e55d3d] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
+            className="bg-white hover:bg-[#2B58A0] text-[#2B58A0] hover:text-white hover:border-white border font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
           >
             Get in Touch
           </Link>

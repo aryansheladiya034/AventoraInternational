@@ -135,13 +135,27 @@ const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
 
   return (
     <div className="bg-white">
-      <section className="bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">Our Products</h1>
-          <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Trade facilitation across diverse industries and product categories
-          </p>
+      {/* Hero Section with Background Image */}
+      <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/Baki na pages ma.jfif')` }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">Our Products</h1>
+            <p className="text-xl text-gray-100 max-w-3xl mx-auto">
+              Trade facilitation across diverse industries and product categories
+            </p>
+          </div>
+        </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
       <section className="py-16 bg-white">

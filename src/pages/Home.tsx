@@ -16,13 +16,14 @@ const Home: React.FC = () => {
       description: 'Our mission is to simplify international trade by offering efficient, reliable, and tailored import-export solutions for our global partners.'
     },
     {
-      title: 'Sustainable Choices, Better Future.',
-      description: 'Discover our wide range of eco-friendly, biodegradable products crafted to protect the environment. Each product is designed to reduce waste, conserve resources, and support a greener, cleaner tomorrow.'
-    },
-    {
       title: 'Bringing authentic flavors from our land to your table.',
       description: 'We take pride in exporting superior-grade spices and agro products known for their aroma, flavor, and freshness. Every shipment from Aventora International carries the rich heritage of taste to homes and restaurants worldwide.'
+    },
+    {
+      title: 'Sustainable Choices, Better Future.',
+      description: 'Discover our wide range of eco-friendly, biodegradable products crafted to protect the environment. Each product is designed to reduce waste, conserve resources, and support a greener, cleaner tomorrow.'
     }
+    
   ];
 
   useEffect(() => {
@@ -122,27 +123,19 @@ const Home: React.FC = () => {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              {heroContent[currentSlide].title}
-            </h1>
-            <p className="text-xl md:text-2xl mb-10 text-gray-100">
-              {heroContent[currentSlide].description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                to="/products"
-                className="bg-[#FF6F4E] hover:bg-[#e55d3d] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg shadow-lg text-center"
-              >
-                View Our Products
-              </Link>
-              <Link
-                to="/contact"
-                className="bg-white hover:bg-gray-100 text-[#2B58A0] font-semibold px-8 py-4 rounded-lg transition-colors text-lg shadow-lg text-center"
-              >
-                Contact Us
-              </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
+            {/* Left side - Content */}
+            <div className="text-left">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-[#FF6F4E]">
+                {heroContent[currentSlide].title}
+              </h1>
+              <p className="text-sm md:text-base lg:text-lg text-gray-100">
+                {heroContent[currentSlide].description}
+              </p>
             </div>
+            
+            {/* Right side - Empty space for image visibility */}
+            <div className="hidden lg:block"></div>
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
@@ -154,7 +147,7 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Side - Text */}
             <div className="space-y-6">
-              <h2 className="text-4xl md:text-6xl font-extrabold">
+              <h2 className="text-3xl md:text-5xl font-bold">
                 <span className="text-[#2B58A0]">Welcome to</span>{' '}
                 <span className="text-[#FF6F4E]">Aventora International</span>
               </h2>
@@ -182,17 +175,114 @@ const Home: React.FC = () => {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4">Why Choose Us</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
             <p className="text-lg text-gray-600">Your success is our priority</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {whyChooseUs.map((reason, index) => (
-              <div key={index} className="flex items-start space-x-4 bg-white p-6 rounded-lg shadow-sm">
-                <Shield className="h-7 w-7 text-[#FF6F4E] flex-shrink-0 mt-1" />
-                <p className="text-gray-700 text-base">{reason}</p>
+              <div key={index} className="flex items-start space-x-3 bg-white p-6 rounded-lg shadow-sm">
+                <Shield className="h-6 w-6 text-[#FF6F4E] flex-shrink-0 mt-1" />
+                <p className="text-gray-700">{reason}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Products Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Featured Products</h2>
+            <p className="text-lg text-gray-600">Premium quality products for global markets</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            {/* Spices Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/images/Spices Profile.jpg" 
+                  alt="Premium Spices" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Spices</h3>
+                <p className="text-gray-600 mb-4">
+                  Authentic Indian spices known for their rich aroma, vibrant color, and exceptional quality. 
+                  From ground spices to whole spices and spice blends.
+                </p>
+                <Link 
+                  to="/products/spices" 
+                  className="text-[#2B58A0] hover:text-[#FF6F4E] font-semibold inline-flex items-center transition-colors"
+                >
+                  Explore Spices →
+                </Link>
+              </div>
+            </div>
+
+            {/* Rice Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/images/Rice Profile.jpg" 
+                  alt="Premium Rice" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Rice</h3>
+                <p className="text-gray-600 mb-4">
+                  Premium Basmati and Non-Basmati rice varieties sourced from the finest paddy fields. 
+                  Long grain, aromatic, and perfect for global cuisine.
+                </p>
+                <Link 
+                  to="/products/rice" 
+                  className="text-[#2B58A0] hover:text-[#FF6F4E] font-semibold inline-flex items-center transition-colors"
+                >
+                  Explore Rice →
+                </Link>
+              </div>
+            </div>
+
+            {/* Compostable Tableware Card */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+              <div className="relative overflow-hidden">
+                <img 
+                  src="/images/CompostableTablewareProfile.png" 
+                  alt="Compostable Tableware" 
+                  className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">Compostable Tableware</h3>
+                <p className="text-gray-600 mb-4">
+                  Eco-friendly, biodegradable tableware made from sustainable materials. 
+                  Perfect for environmentally conscious businesses and consumers.
+                </p>
+                <Link 
+                  to="/products/compostable-tableware" 
+                  className="text-[#2B58A0] hover:text-[#FF6F4E] font-semibold inline-flex items-center transition-colors"
+                >
+                  Explore Tableware →
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          {/* Show More Button */}
+          <div className="text-center">
+            <Link
+              to="/products"
+              className="bg-[#2B58A0] hover:bg-[#1e3f70] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
+            >
+              Show More Products
+            </Link>
           </div>
         </div>
       </section>
@@ -240,36 +330,50 @@ const Home: React.FC = () => {
               <div className="flex space-x-8 flex-shrink-0">
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/APEDA.png" 
+                    src="/images/CErtificate/Apeda-Logo.webp" 
                     alt="APEDA Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/msme.jpg" 
-                    alt="MSME Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/dgft.jpg" 
+                    src="/images/CErtificate/DGFT LOGO.jfif" 
                     alt="DGFT Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/FSSAI.png" 
+                    src="/images/CErtificate/FIEO-Logo.webp" 
+                    alt="FIEO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/FSSAI LOGO.png" 
                     alt="FSSAI Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/Make in India.jpg" 
+                    src="/images/CErtificate/G20.jfif" 
+                    alt="G20 Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/MAKE IN INDIA.jpg" 
                     alt="Make in India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/MSME LOGO.png" 
+                    alt="MSME Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
@@ -278,36 +382,50 @@ const Home: React.FC = () => {
               <div className="flex space-x-8 flex-shrink-0">
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/APEDA.png" 
+                    src="/images/CErtificate/Apeda-Logo.webp" 
                     alt="APEDA Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/msme.jpg" 
-                    alt="MSME Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/dgft.jpg" 
+                    src="/images/CErtificate/DGFT LOGO.jfif" 
                     alt="DGFT Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/FSSAI.png" 
+                    src="/images/CErtificate/FIEO-Logo.webp" 
+                    alt="FIEO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/FSSAI LOGO.png" 
                     alt="FSSAI Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
                 <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
                   <img 
-                    src="/images/CErtificate/Make in India.jpg" 
+                    src="/images/CErtificate/G20.jfif" 
+                    alt="G20 Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/MAKE IN INDIA.jpg" 
                     alt="Make in India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/MSME LOGO.png" 
+                    alt="MSME Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>

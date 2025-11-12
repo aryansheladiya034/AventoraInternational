@@ -18,7 +18,7 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
             <Phone className="h-5 w-5 ml-4" />
             <span className="text-base ">+91 76981 07075</span>
           </a>
-          
+          <span className="font-bold">|</span>
           <a 
             href="mailto:info@aventorainternational.com" 
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
@@ -49,7 +49,7 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
             <Twitter className="h-4 w-4" />
           </a>
           <a 
-            href="https://instagram.com" 
+            href="https://www.instagram.com/aventora_international?igsh=dDd0d2ttbjU4ejVi" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
