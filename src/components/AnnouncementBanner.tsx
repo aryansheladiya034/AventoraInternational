@@ -9,30 +9,27 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
   return (
     <div className="bg-gradient-to-r from-[#FF6F4E] to-[#ff8a6d] text-white">
       <div className="flex items-center justify-between px-4 py-3">
-        {/* Left spacer for balance */}
-        <div className="flex-1"></div>
-        
-        {/* Center content - Contact info */}
-        <div className="flex items-center justify-center gap-8">
+        {/* Left side - Contact info */}
+        <div className="flex items-center gap-8">
           <a 
             href="tel:+917698107075" 
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <Phone className="h-5 w-5 font-bold" />
-            <span className="text-base font-bold">+91 76981 07075</span>
+            <Phone className="h-5 w-5 ml-4" />
+            <span className="text-base ">+91 76981 07075</span>
           </a>
           
           <a 
             href="mailto:info@aventorainternational.com" 
             className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <Mail className="h-5 w-5 font-bold" />
-            <span className="text-base font-bold">info@aventorainternational.com</span>
+            <Mail className="h-5 w-5 ml-1" />
+            <span className="text-base ">info@aventorainternational.com</span>
           </a>
         </div>
         
         {/* Right side - Social media icons */}
-        <div className="flex-1 flex items-center justify-end gap-3">
+        <div className="flex items-center gap-3">
           <a 
             href="https://facebook.com" 
             target="_blank" 

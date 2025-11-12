@@ -2,7 +2,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
-import Services from './pages/Services';
 import ProductsOverview from './pages/ProductsOverview';
 import CategoryPage from './pages/CategoryPage';
 import ProductDetailPage from './pages/ProductDetailPage';
@@ -30,7 +29,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/products" element={<ProductsOverview />} />
           <Route path="/products/rice" element={<RicePage />} />
           <Route path="/products/rice/:productSlug" element={<RiceProductDetailPage />} />

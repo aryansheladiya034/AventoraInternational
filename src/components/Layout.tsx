@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown, Linkedin, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Menu, X, ChevronDown, Linkedin, Instagram, Twitter, Facebook, ChevronRight, Mail, Phone, MapPin, FileText } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import AnnouncementBanner from './AnnouncementBanner';
 import Logo from './Logo';
@@ -13,6 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -24,6 +25,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     }
   }, []);
 
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   const handleCloseAnnouncement = () => {
     setShowAnnouncement(false);
     sessionStorage.setItem('announcementClosed', 'true');
@@ -32,7 +38,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const menuItems = [
     { id: '/', label: 'Home' },
     { id: '/about', label: 'About' },
-    { id: '/services', label: 'Services' },
     { id: '/products', label: 'Products', hasDropdown: true },
     { id: '/contact', label: 'Contact Us' },
   ];
@@ -40,8 +45,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const productCategories = [
     { id: '/products/rice', label: 'Rice' },
     { id: '/products/spices', label: 'Spices' },
-    { id: '/products/pulses', label: 'Pulses & Lentils' },
-    { id: '/products/dehydrated', label: 'Dehydrated Products' },
+    { id: '/products/pulses-lentils', label: 'Pulses & Lentils' },
+    { id: '/products/dehydrated-products', label: 'Dehydrated Products' },
     { id: '/products/oil-seeds', label: 'Oil Seeds' },
     { id: '/products/compostable-tableware', label: 'Compostable Tableware' },
   ];
@@ -49,11 +54,25 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const handleNavigation = (path: string) => {
     navigate(path);
     setMobileMenuOpen(false);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleMouseEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setProductsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    const timeout = setTimeout(() => {
+      setProductsDropdownOpen(false);
+    }, 3000); // 3 seconds delay before closing
+    setDropdownTimeout(timeout);
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col">
       {showAnnouncement && (
         <AnnouncementBanner onClose={handleCloseAnnouncement} />
       )}
@@ -74,12 +93,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <div 
                     key={item.id} 
                     className="relative"
-                    onMouseEnter={() => setProductsDropdownOpen(true)}
-                    onMouseLeave={() => setProductsDropdownOpen(false)}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <button
                       onClick={() => handleNavigation(item.id)}
-                      className={`text-base font-bold transition-colors flex items-center gap-1 ${
+                      className={`text-base font-bold transition-colors flex items-center gap-1 uppercase ${
                         location.pathname.startsWith('/products')
                           ? 'text-[#2B58A0] border-b-2 border-[#FF6F4E]'
                           : 'text-gray-700 hover:text-[#2B58A0]'
@@ -107,7 +126,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                   <button
                     key={item.id}
                     onClick={() => handleNavigation(item.id)}
-                    className={`text-base font-bold transition-colors ${
+                    className={`text-base font-bold transition-colors uppercase ${
                       location.pathname === item.id
                         ? 'text-[#2B58A0] border-b-2 border-[#FF6F4E]'
                         : 'text-gray-700 hover:text-[#2B58A0]'
@@ -143,7 +162,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         handleNavigation(item.id);
                       }
                     }}
-                    className={`block w-full text-left px-4 py-3 text-base font-bold ${
+                    className={`block w-full text-left px-4 py-3 text-base font-bold uppercase ${
                       location.pathname === item.id || (item.hasDropdown && location.pathname.startsWith('/products'))
                         ? 'bg-[#2B58A0] text-white'
                         : 'text-gray-700 hover:bg-gray-100'
@@ -180,13 +199,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-              <ul className="space-y-2">
+              <h4 className="text-2xl font-bold mb-6">Quick Links</h4>
+              <ul className="space-y-3">
                 {menuItems.map((item) => (
-                  <li key={item.id}>
+                  <li key={item.id} className="flex items-center">
+                    <ChevronRight className="h-4 w-4 mr-2 text-[#FF6F4E] flex-shrink-0" />
                     <button
                       onClick={() => handleNavigation(item.id)}
-                      className="text-sm text-gray-200 hover:text-[#FF6F4E] transition-colors"
+                      className="text-base text-gray-200 hover:text-[#FF6F4E] transition-colors"
                     >
                       {item.label}
                     </button>
@@ -196,37 +216,49 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-gray-200">
-                <li>Email: info@aventorainternational.com</li>
-                <li>Phone: +91 76981 07075</li>
-                <li>Address: 123 Trade Center, Global City</li>
+              <h4 className="text-2xl font-bold mb-6">Contact</h4>
+              <ul className="space-y-3 text-base text-gray-200">
+                <li className="flex items-start">
+                  <Mail className="h-5 w-5 mr-3 text-[#FF6F4E] flex-shrink-0 mt-0.5" />
+                  <span>info@aventorainternational.com</span>
+                </li>
+                <li className="flex items-start">
+                  <Phone className="h-5 w-5 mr-3 text-[#FF6F4E] flex-shrink-0 mt-0.5" />
+                  <span>+91 76981 07075</span>
+                </li>
+                <li className="flex items-start">
+                  <MapPin className="h-5 w-5 mr-3 text-[#FF6F4E] flex-shrink-0 mt-0.5" />
+                  <span>123 Trade Center, Global City</span>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-semibold mb-4">Legal</h4>
-              <ul className="space-y-2">
-                <li>
+              <h4 className="text-2xl font-bold mb-6">Legal</h4>
+              <ul className="space-y-3">
+                <li className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2 text-[#FF6F4E] flex-shrink-0" />
                   <button
                     onClick={() => handleNavigation('/privacy')}
-                    className="text-sm text-gray-200 hover:text-[#FF6F4E] transition-colors"
+                    className="text-base text-gray-200 hover:text-[#FF6F4E] transition-colors"
                   >
                     Privacy Policy
                   </button>
                 </li>
-                <li>
+                <li className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2 text-[#FF6F4E] flex-shrink-0" />
                   <button
                     onClick={() => handleNavigation('/terms')}
-                    className="text-sm text-gray-200 hover:text-[#FF6F4E] transition-colors"
+                    className="text-base text-gray-200 hover:text-[#FF6F4E] transition-colors"
                   >
                     Terms & Conditions
                   </button>
                 </li>
-                <li>
+                <li className="flex items-center">
+                  <FileText className="h-4 w-4 mr-2 text-[#FF6F4E] flex-shrink-0" />
                   <button
                     onClick={() => handleNavigation('/faq')}
-                    className="text-sm text-gray-200 hover:text-[#FF6F4E] transition-colors"
+                    className="text-base text-gray-200 hover:text-[#FF6F4E] transition-colors"
                   >
                     FAQ
                   </button>
@@ -237,54 +269,56 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="flex items-center space-x-2 mb-4">
                 <Logo size="small" variant="white" />
               </div>
-              <p className="text-sm text-gray-200">
+              <p className="text-base text-gray-200">
                 Connecting the world through trusted global trade solutions.
               </p>
               <br />
               
-                 <div className="flex-1 flex items-center justify-start gap-3">
+                 <div className="flex-1 flex items-center justify-start gap-4">
           <a 
             href="https://facebook.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
             aria-label="Facebook"
           >
-            <Facebook className="h-4 w-4" />
+            <Facebook className="h-6 w-6" />
           </a>
           <a 
             href="https://twitter.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
             aria-label="X (Twitter)"
           >
-            <Twitter className="h-4 w-4" />
+            <Twitter className="h-6 w-6" />
           </a>
           <a 
             href="https://instagram.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
             aria-label="Instagram"
           >
-            <Instagram className="h-4 w-4" />
+            <Instagram className="h-6 w-6" />
           </a>
           <a 
             href="https://linkedin.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
             aria-label="LinkedIn"
           >
-            <Linkedin className="h-4 w-4" />
+            <Linkedin className="h-6 w-6" />
           </a>
         </div>
             </div>
           </div>
-
-          <div className="border-t border-gray-600 mt-8 pt-2 text-center text-xl text-gray-300">
-            <p className="text-orange-400">&copy; 2025 Aventora International. All rights reserved.</p>
+        </div>
+        
+        <div className="bg-[#FF6F4E] py-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p className="text-sm text-white">&copy; 2025 Aventora International. All rights reserved.</p>
           </div>
         </div>
       </footer>

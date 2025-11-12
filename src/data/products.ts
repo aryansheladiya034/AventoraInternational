@@ -162,7 +162,7 @@ export const productData: ProductData = {
       slug: 'dehydrated-products',
       description: 'Premium dehydrated onion and garlic products with exceptional flavor and quality.',
       icon: '',
-      image: 'src/assets/images/products/Dehydrated Products profile.webp',
+      image: '/images/Dehydrated Products profile.webp',
       subCategories: [
         {
           id: 'dehydrated-onion',
@@ -170,11 +170,11 @@ export const productData: ProductData = {
           slug: 'dehydrated-onion',
           description: 'High-quality dehydrated onion products in various forms.',
           products: [
-            generateDummyProduct('Dehydrated Onion Chopped', 'dehydrated'),
-            generateDummyProduct('Dehydrated Onion Flakes', 'dehydrated'),
-            generateDummyProduct('Dehydrated Onion Granules', 'dehydrated'),
-            generateDummyProduct('Dehydrated Onion Minced', 'dehydrated'),
-            generateDummyProduct('Dehydrated Onion Powder', 'dehydrated')
+            // generateDummyProduct('Dehydrated Onion Chopped', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Onion Flakes', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Onion Granules', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Onion Minced', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Onion Powder', 'dehydrated')
           ]
         },
         {
@@ -183,11 +183,11 @@ export const productData: ProductData = {
           slug: 'dehydrated-garlic',
           description: 'Premium dehydrated garlic products with rich flavor and aroma.',
           products: [
-            generateDummyProduct('Dehydrated Garlic Chopped', 'dehydrated'),
-            generateDummyProduct('Dehydrated Garlic Flakes', 'dehydrated'),
-            generateDummyProduct('Dehydrated Garlic Granules', 'dehydrated'),
-            generateDummyProduct('Dehydrated Garlic Minced', 'dehydrated'),
-            generateDummyProduct('Dehydrated Garlic Powder', 'dehydrated')
+            // generateDummyProduct('Dehydrated Garlic Chopped', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Garlic Flakes', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Garlic Granules', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Garlic Minced', 'dehydrated'),
+            // generateDummyProduct('Dehydrated Garlic Powder', 'dehydrated')
           ]
         }
       ]
@@ -198,7 +198,7 @@ export const productData: ProductData = {
       slug: 'oil-seeds',
       description: 'Premium quality peanuts and sesame seeds for oil extraction and direct consumption.',
       icon: '',
-      image: 'src/assets/images/products/Oil Seeds Profile.avif',
+      image: '/images/Oil Seeds Profile.avif',
       subCategories: [
         {
           id: 'peanut',
@@ -206,12 +206,12 @@ export const productData: ProductData = {
           slug: 'peanut',
           description: 'Various varieties of premium peanuts for different applications.',
           products: [
-            generateDummyProduct('Shelled/Unshelled Peanut', 'oil-seeds'),
-            generateDummyProduct('Bold Peanut', 'oil-seeds'),
-            generateDummyProduct('Java Peanut', 'oil-seeds'),
-            generateDummyProduct('TJ Peanut', 'oil-seeds'),
-            generateDummyProduct('Blanched Peanut', 'oil-seeds'),
-            generateDummyProduct('Roasted Peanut', 'oil-seeds')
+            // generateDummyProduct('Shelled/Unshelled Peanut', 'oil-seeds'),
+            // generateDummyProduct('Bold Peanut', 'oil-seeds'),
+            // generateDummyProduct('Java Peanut', 'oil-seeds'),
+            // generateDummyProduct('TJ Peanut', 'oil-seeds'),
+            // generateDummyProduct('Blanched Peanut', 'oil-seeds'),
+            // generateDummyProduct('Roasted Peanut', 'oil-seeds')
           ]
         },
         {
@@ -220,9 +220,10 @@ export const productData: ProductData = {
           slug: 'sesame',
           description: 'Premium sesame seeds in various colors and processing forms.',
           products: [
-            generateDummyProduct('White Sesame Seeds', 'oil-seeds'),
-            generateDummyProduct('Black Sesame Seeds', 'oil-seeds'),
-            generateDummyProduct('Brown Sesame Seeds', 'oil-seeds')
+            // generateDummyProduct('White Sesame Seeds', 'oil-seeds'),
+            // generateDummyProduct('White Sesame Seeds', 'oil-seeds'),
+            // generateDummyProduct('Black Sesame Seeds', 'oil-seeds'),
+            // generateDummyProduct('Brown Sesame Seeds', 'oil-seeds')
           ]
         }
       ]
@@ -233,7 +234,7 @@ export const productData: ProductData = {
       slug: 'spices',
       description: 'Authentic whole spices, ground spices, and spice blends from India.',
       icon: '',
-      image: 'src/assets/images/products/Spices Profile.jpg',
+      image: '/images/Spices Profile.jpg',
       subCategories: [
         {
           id: 'whole-spices',
@@ -241,18 +242,18 @@ export const productData: ProductData = {
           slug: 'whole-spices',
           description: 'Premium whole spices with authentic aroma and flavor.',
           products: [
-            generateDummyProduct('Green Cardamom', 'spices'),
-            generateDummyProduct('Cumin', 'spices'),
-            generateDummyProduct('Dried Chillies', 'spices'),
-            generateDummyProduct('Cloves', 'spices'),
-            generateDummyProduct('Black Pepper', 'spices'),
-            generateDummyProduct('Cinnamon', 'spices'),
-            generateDummyProduct('Turmeric', 'spices'),
-            generateDummyProduct('Funnel Seeds', 'spices'),
-            generateDummyProduct('Fenugreek seeds', 'spices'),
-            generateDummyProduct('Mustard seeds', 'spices'),
-            generateDummyProduct('Nutmeg', 'spices'),
-            generateDummyProduct('Tamarind', 'spices')
+            // generateDummyProduct('Green Cardamom', 'spices'),
+            // generateDummyProduct('Cumin', 'spices'),
+            // generateDummyProduct('Dried Chillies', 'spices'),
+            // generateDummyProduct('Cloves', 'spices'),
+            // generateDummyProduct('Black Pepper', 'spices'),
+            // generateDummyProduct('Cinnamon', 'spices'),
+            // generateDummyProduct('Turmeric', 'spices'),
+            // generateDummyProduct('Funnel Seeds', 'spices'),
+            // generateDummyProduct('Fenugreek seeds', 'spices'),
+            // generateDummyProduct('Mustard seeds', 'spices'),
+            // generateDummyProduct('Nutmeg', 'spices'),
+            // generateDummyProduct('Tamarind', 'spices')
           ]
         },
         {
@@ -291,7 +292,7 @@ export const productData: ProductData = {
       slug: 'pulses-lentils',
       description: 'High-protein pulses and lentils, essential ingredients for healthy cooking.',
       icon: '',
-      image: 'src/assets/images/products/Pulses & Lentils Profile.jpg',
+      image: '/images/Pulses & Lentils Profile.jpg',
       subCategories: [
         {
           id: 'pulses',
@@ -299,14 +300,14 @@ export const productData: ProductData = {
           slug: 'pulses',
           description: 'Premium quality pulses rich in protein and nutrients.',
           products: [
-            generateDummyProduct('Black Eye Bean', 'pulses'),
-            generateDummyProduct('Brown Eye Bean', 'pulses'),
-            generateDummyProduct('Chickpea', 'pulses'),
-            generateDummyProduct('Red Kidney Bean', 'pulses'),
-            generateDummyProduct('Soyabean', 'pulses'),
-            generateDummyProduct('Green Peas', 'pulses'),
-            generateDummyProduct('Green Mung', 'pulses'),
-            generateDummyProduct('Moth Beans', 'pulses')
+            // generateDummyProduct('Black Eye Bean', 'pulses'),
+            // generateDummyProduct('Brown Eye Bean', 'pulses'),
+            // generateDummyProduct('Chickpea', 'pulses'),
+            // generateDummyProduct('Red Kidney Bean', 'pulses'),
+            // generateDummyProduct('Soyabean', 'pulses'),
+            // generateDummyProduct('Green Peas', 'pulses'),
+            // generateDummyProduct('Green Mung', 'pulses'),
+            // generateDummyProduct('Moth Beans', 'pulses')
           ]
         },
         {
@@ -315,10 +316,10 @@ export const productData: ProductData = {
           slug: 'lentils',
           description: 'Traditional Indian lentils (dal) for authentic cooking.',
           products: [
-            generateDummyProduct('Masoor Dal', 'pulses'),
-            generateDummyProduct('Mung Dal', 'pulses'),
-            generateDummyProduct('Toor Dal', 'pulses'),
-            generateDummyProduct('Urad Dal', 'pulses')
+            // generateDummyProduct('Masoor Dal', 'pulses'),
+            // generateDummyProduct('Mung Dal', 'pulses'),
+            // generateDummyProduct('Toor Dal', 'pulses'),
+            // generateDummyProduct('Urad Dal', 'pulses')
           ]
         }
       ]
@@ -329,7 +330,7 @@ export const productData: ProductData = {
       slug: 'compostable-tableware',
       description: 'Eco-friendly, biodegradable tableware made from sustainable materials.',
       icon: '',
-      image: 'src/assets/images/products/CompostableTablewareProfile.png',
+      image: '/images/CompostableTablewareProfile.png',
       subCategories: [
         {
           id: 'compostable-plates',
