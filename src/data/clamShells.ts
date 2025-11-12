@@ -49,7 +49,8 @@ const createClamShellProduct = (
 };
 
 export const clamShellProducts: Product[] = [
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(
         '6" × 6" Clam Shell',
         [
             'Length: 153 mm',
@@ -68,8 +69,16 @@ export const clamShellProducts: Product[] = [
         ],
         ['Compact Size', 'Perfect for Snacks', 'Single Portion']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6  6 Clamshell 1.jfif',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6  6 Clamshell 1.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6  6 Clamshell 2.jpg',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6  6 Clamshell 3.jpg'
+    ]
+  },
     
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(
         '6" × 9" Clam Shell',
         [
             'Length: 153 mm',
@@ -88,8 +97,16 @@ export const clamShellProducts: Product[] = [
         ],
         ['Rectangular Design', 'Sandwich Size', 'Versatile Use']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6 9 Clamshell 3.jpg',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6 9 Clamshell 1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6 9 Clamshell 2.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/6 9 Clamshell 3.jpg'
+    ]
+  },
     
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(
         '8" × 8" Clam Shell',
         [
             'Length: 203 mm',
@@ -108,8 +125,17 @@ export const clamShellProducts: Product[] = [
         ],
         ['Large Capacity', 'Main Meals', 'Restaurant Standard']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 Clamshell 1.jfif',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 Clamshell 1.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 Clamshell 2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 Clamshell 3.jpg'
+    ]
+  },
     
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(  
+    
         '8" × 8" 3 CP Clam Shell',
         [
             'Length: 203 mm',
@@ -129,8 +155,16 @@ export const clamShellProducts: Product[] = [
         ],
         ['3 Compartments', 'Organized Meals', 'Portion Control']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 3 CP Clamshell 1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 3 CP Clamshell 1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 3 CPClamshell 2.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/8 8 3 CP Clamshell 3.webp'
+    ]
+  },
     
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(
         '9" × 9" Clam Shell',
         [
             'Length: 230 mm',
@@ -149,8 +183,16 @@ export const clamShellProducts: Product[] = [
         ],
         ['Extra Large', 'Family Size', 'Premium Capacity']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 Clamshell 1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 Clamshell 1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 Clamshell 2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 Clamshell 3.jfif'
+    ]
+  },
     
-    createClamShellProduct(
+    {
+        ...createClamShellProduct(
         '9" × 9" 3 CP Clam Shell',
         [
             'Length: 230 mm',
@@ -169,5 +211,12 @@ export const clamShellProducts: Product[] = [
             'Secure Closure: Yes'
         ],
         ['3 Compartments', 'Large Size', 'Complete Meal Solution']
-    )
+    ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 3 CP Clamshell 1.png',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 3 CP Clamshell 1.png',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 3 CP Clamshell 2.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CLAM SHELLS/9 9 3 CP Clamshell 3.webp'
+    ]
+  }
 ];

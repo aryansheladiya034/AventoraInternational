@@ -199,7 +199,7 @@ const Quote: React.FC<QuoteProps> = ({ onSubmit }) => {
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2B58A0] focus:border-transparent outline-none transition-colors"
-                    placeholder="+1 (555) 123-4567"
+                    placeholder="+91 76981 07075"
                   />
                 </div>
               </div>
@@ -268,7 +268,7 @@ const Quote: React.FC<QuoteProps> = ({ onSubmit }) => {
                 href="tel:+15551234567"
                 className="bg-white text-[#2B58A0] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Call: +1 (555) 123-4567
+                Call: +91 76981 07075
               </a>
               <a
                 href="https://wa.me/15551234567"

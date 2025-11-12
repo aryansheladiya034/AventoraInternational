@@ -85,13 +85,13 @@ const ProductsOverview: React.FC = () => {
             >
               <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] relative">
                 <img
-                  src="/api/placeholder/600/400"
+                  src="/src/assets/images/products/Rice Profile.jpg"
                   alt="Rice"
                   className="w-full h-48 object-cover opacity-80"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                 <div className="absolute bottom-4 left-4">
-                  <span className="text-4xl">🌾</span>
+                  
                 </div>
                 <div className="absolute top-4 right-4">
                   <span className="bg-[#FF6F4E] text-white px-2 py-1 rounded-full text-xs font-medium">

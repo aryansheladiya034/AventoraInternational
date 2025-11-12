@@ -68,8 +68,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Raw Basmati Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Raw Basmati Rice1.jpg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Raw Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Raw Basmati Rice3.jpeg'
+    ],
     category: 'basmati',
     variety: '1121',
     type: 'raw'
@@ -87,8 +91,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Steam Basmati Rice1.jpeg',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Steam Basmati Rice1.jpeg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Steam Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Steam Basmati Rice3.jpg'
+    ],
     category: 'basmati',
     variety: '1121',
     type: 'steam'
@@ -106,8 +114,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Golden Sella Basmati Rice1.webp',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Golden Sella Basmati Rice1.webp',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Golden Sella Basmati Rice2.jpeg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 Golden Sella Basmati Rice3.jfif'
+    ],
     category: 'basmati',
     variety: '1121',
     type: 'golden-sella'
@@ -125,8 +137,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/rice/BASMATI RICE/1121 BASMATI RICE/1121 White Sella Basmati Rice1.jfif',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 White Sella Basmati Rice1.jfif',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 White Sella Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/1121 BASMATI RICE/1121 White Sella Basmati Rice3.jpeg'
+    ],
     category: 'basmati',
     variety: '1121',
     type: 'white-sella'
@@ -146,8 +162,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509  Steam Basmati Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509  Steam Basmati Rice1.jpg',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 Steam Basmati Rice2.webp',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 Steam Basmati Rice3.jpeg'
+    ],
     category: 'basmati',
     variety: '1509',
     type: 'steam'
@@ -166,8 +186,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/rice/BASMATI RICE/1509 BASMATI RICE/1509 Golden Sella Basmati Rice1.jfif',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 Golden Sella Basmati Rice1.jfif',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 Golden Sella Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 Golden Sella Basmati Rice3.jpeg'
+    ],
     category: 'basmati',
     variety: '1509',
     type: 'golden-sella'
@@ -186,8 +210,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 White Sella Basmati Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 White Sella Basmati Rice1.jpg',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 White Sella Basmati Rice2.jfif',
+      '/images/products/RICE/BASMATI RICE/1509 BASMATI RICE/1509 White Sella Basmati Rice3.jfif'
+    ],
     category: 'basmati',
     variety: '1509',
     type: 'white-sella'
@@ -207,8 +235,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Steam Basmati Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Steam Basmati Rice1.jpg',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Steam Basmati Rice2.jpeg',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Steam Basmati Rice3.jpeg'
+    ],
     category: 'basmati',
     variety: '1401',
     type: 'steam'
@@ -227,8 +259,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Golden Sella Basmati Rice1.webp',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Golden Sella Basmati Rice1.webp',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Golden Sella Basmati Rice2.jpeg',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 Golden Sella Basmati Rice3.jpg'
+    ],
     category: 'basmati',
     variety: '1401',
     type: 'golden-sella'
@@ -247,8 +283,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 White Sella Basmati Rice1.webp',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 White Sella Basmati Rice1.webp',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 White Sella Basmati Rice2.png',
+      '/images/products/RICE/BASMATI RICE/PUSA 1401 BASMARI RICE/Pusa 1401 White Sella Basmati Rice1.webp'
+    ],
     category: 'basmati',
     variety: '1401',
     type: 'white-sella'
@@ -268,8 +308,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Steam Basmati Rice1.png',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Steam Basmati Rice1.png',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Steam Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Steam Basmati Rice3.webp'
+    ],
     category: 'basmati',
     variety: 'sugandha',
     type: 'steam'
@@ -288,8 +332,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Golden Sella Basmati Rice1.png',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Golden Sella Basmati Rice1.png',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Golden Sella Basmati Rice2.jpg',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha Golden Sella Basmati Rice3.webp'
+    ],
     category: 'basmati',
     variety: 'sugandha',
     type: 'golden-sella'
@@ -308,8 +356,12 @@ const riceProducts: RiceProduct[] = [
     broken: '1% – 2% Max',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha White Sella Basmati Rice1.png',
+    gallery: [
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha White Sella Basmati Rice1.png',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha White Sella Basmati Rice2.avif',
+      '/images/products/RICE/BASMATI RICE/SUGANDHA BASMATI RICE/Sugandha White Sella Basmati Rice3.jfif'
+    ],
     category: 'basmati',
     variety: 'sugandha',
     type: 'white-sella'
@@ -330,8 +382,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     chalkyGrains: '5% Max',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Raw Rice1.png',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Raw Rice1.png',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Raw Rice2.webp',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Raw Rice3.jpeg'
+    ],
     category: 'non-basmati',
     variety: 'pr-11-14',
     type: 'raw'
@@ -351,8 +407,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     chalkyGrains: 'Nil / Very Low',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Steam Rice1.jpeg',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Steam Rice1.jpeg',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Steam Rice2.webp',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Steam Rice3.jpg'
+    ],
     category: 'non-basmati',
     variety: 'pr-11-14',
     type: 'steam'
@@ -372,8 +432,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Natural Golden Yellow',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Golden Sella Rice1.jpeg',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Golden Sella Rice1.jpeg',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Golden Sella Rice2.webp',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 Golden Sella Rice3.webp'
+    ],
     category: 'non-basmati',
     variety: 'pr-11-14',
     type: 'golden-sella'
@@ -393,8 +457,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Natural White / Creamy White',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 White Sella Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 White Sella Rice1.jpg',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 White Sella Rice2.jpg',
+      '/images/products/RICE/NON-BASMATI RICE/PR 11 14 RICE/PR 11 14 White Sella Rice3.png'
+    ],
     category: 'non-basmati',
     variety: 'pr-11-14',
     type: 'white-sella'
@@ -415,8 +483,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Parboiled Light Yellow / Golden',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Peraboiled%20Rice1.webp',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Peraboiled%20Rice1.webp',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Peraboiled%20Rice2.jpg',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Peraboiled%20Rice3.jfif'
+    ],
     category: 'non-basmati',
     variety: 'ir-64',
     type: 'parboiled'
@@ -436,8 +508,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Natural White',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Raw%20Rice1.jpeg',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Raw%20Rice1.jpeg',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Raw%20Rice2.webp',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%205%25%20broken%20Raw%20Rice3.jfif'
+    ],
     category: 'non-basmati',
     variety: 'ir-64',
     type: 'raw'
@@ -457,8 +533,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Parboiled Light Yellow / Golden',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20peraboiled%20Rice1.jpg',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20peraboiled%20Rice1.jpg',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20peraboiled%20Rice2.jfif',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20peraboiled%20Rice3.jfif'
+    ],
     category: 'non-basmati',
     variety: 'ir-64',
     type: 'parboiled'
@@ -478,8 +558,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Natural White',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non-Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20Raw%20Rice1.webp',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20Raw%20Rice1.webp',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20Raw%20Rice2.webp',
+      '/images/products/RICE/NON-BASMATI%20RICE/IR-64%20RICE/IR-64%2025%25%20broken%20Raw%20Rice3.webp'
+    ],
     category: 'non-basmati',
     variety: 'ir-64',
     type: 'raw'
@@ -500,8 +584,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     chalkyGrains: '5% Max',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Raw Rice1.png',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Raw Rice1.png',
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Raw Rice2.webp',
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Raw Rice3.jpg'
+    ],
     category: 'non-basmati',
     variety: 'sona-masoori',
     type: 'raw'
@@ -521,8 +609,12 @@ const riceProducts: RiceProduct[] = [
     foreignMatter: 'Nil',
     color: 'Natural Steam Polished White',
     packing: '1, 2, 5, 10, 25, 50 Kg – PP Bag, Non Woven Bag, BOPP Bag, Jute Bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Steam Rice1.png',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Steam Rice1.png',
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Steam Rice2.jpg',
+      '/images/products/RICE/NON-BASMATI RICE/SONA MANSOORI RICE/Sona Masoori Steam Rice3.jpeg'
+    ],
     category: 'non-basmati',
     variety: 'sona-masoori',
     type: 'steam'
@@ -542,8 +634,12 @@ const riceProducts: RiceProduct[] = [
     broken: 'As per requirement',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Raw Rice1.png',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Raw Rice1.png',
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Raw Rice2.jpg',
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Raw Rice3.jfif'
+    ],
     category: 'non-basmati',
     variety: 'swarna',
     type: 'raw'
@@ -562,8 +658,12 @@ const riceProducts: RiceProduct[] = [
     broken: 'As per requirement',
     foreignMatter: 'Nil',
     packing: 'Packing 1,2,5,10,25,50 Kg PP bag, Non Woven bag, BOPP bag, Jute bag & Customized Packing',
-    image: '/api/placeholder/400/300',
-    gallery: ['/api/placeholder/400/300', '/api/placeholder/400/300', '/api/placeholder/400/300'],
+    image: '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Peraboiled Rice1.png',
+    gallery: [
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Peraboiled Rice1.png',
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Peraboiled Rice2.jfif',
+      '/images/products/RICE/NON-BASMATI RICE/SWARNA RICE/Swarna Peraboiled Rice3.jfif'
+    ],
     category: 'non-basmati',
     variety: 'swarna',
     type: 'parboiled'

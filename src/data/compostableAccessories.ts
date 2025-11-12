@@ -49,7 +49,8 @@ const createCompostableAccessoryProduct = (
 };
 
 export const compostableAccessoriesProducts: Product[] = [
-    createCompostableAccessoryProduct(
+    {
+        ...createCompostableAccessoryProduct(
         'PLA Drink Cups',
         [
             'Volume Options: 200ml, 250ml, 300ml, 350ml, 400ml, 500ml',
@@ -66,8 +67,15 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Multiple Sizes', 'Clear & White Options', 'Plant-Based PLA']
     ),
-    
-    createCompostableAccessoryProduct(
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/250 ML PLA Drink Cup 2.jfif',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/250 ML PLA Drink Cup 1.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/250 ML PLA Drink Cup 2.jfif',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/250 ML PLA Drink Cup 3.webp'
+    ]
+    },
+    {
+        ...createCompostableAccessoryProduct(
         'PLA Straws',
         [
             'Size Options: 6mm, 8mm, 10mm',
@@ -84,8 +92,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Multiple Diameters', 'Rigid Design', 'Eco-Alternative to Plastic']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Straws 1.jpg',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Straws 1.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Straws 2.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Straws 3.jpg'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+    {
+        ...createCompostableAccessoryProduct(
         'PLA Cutlery Set',
         [
             'Types: Spoon, Fork, Knife',
@@ -102,8 +118,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Complete Cutlery Set', 'PLA & Wood Options', 'Restaurant Quality']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Cutlery 1.jpg',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Cutlery 1.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Cutlery 2.jfif',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE CUPS & CUTLERY/PLA Cutlery 3.jfif'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
         'Compostable Grocery Bags',
         [
             'Size: 5" X 40"',
@@ -120,8 +144,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Food Grade', 'Strong & Durable', 'Multiple Colors']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Grocery Bags 1.jpg',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Grocery Bags 1.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Grocery Bags 2.png',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Grocery Bags 3.jpg'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
         'Compostable Garbage Bags',
         [
             'Size: 5" X 40"',
@@ -138,8 +170,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Heavy Duty', '3 Color Options', 'Waste Management']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Garbage Bags 1.webp',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Garbage Bags 1.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Garbage Bags 2.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Garbage Bags 3.webp'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
         'Compostable Carry Bags',
         [
             'Size Options: 9x12, 10x14, 13x16, 16x20, 17x23, 20x26, 27x30',
@@ -156,8 +196,17 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Multiple Sizes', 'Custom Printing Available', 'Retail Ready']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Carry Bags 1.jpg',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Carry Bags 1.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Carry Bags 2.jpg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Carry Bags 3.jpg'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
+    
         'PLA Bio Based Bottles',
         [
             'Type: Transparent',
@@ -174,8 +223,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Crystal Clear', 'Multiple Volumes', 'Shatter Resistant']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Bio Based Bottles1.avif',   
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Bio Based Bottles1.avif',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Bio Based Bottles2.avif',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Bio Based Bottles3.avif'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
         'PLA Ice Cream Cups',
         [
             'Volume: 100ml',
@@ -192,8 +249,16 @@ export const compostableAccessoriesProducts: Product[] = [
         ],
         ['Freezer Safe', 'Perfect Portion Size', 'Crystal Clear']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Ice Cream Cups1.webp',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Ice Cream Cups1.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Ice Cream Cups2.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Compostable Pla Ice Cream Cups3.webp'
+    ]
+    },
     
-    createCompostableAccessoryProduct(
+     {
+        ...createCompostableAccessoryProduct(
         'PLA Biobased Preforms',
         [
             'Type: Transparent',
@@ -209,5 +274,12 @@ export const compostableAccessoriesProducts: Product[] = [
             'Custom Weights: Available'
         ],
         ['Manufacturing Ready', 'Custom Weights', 'Industrial Use']
-    )
+    ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Pla Biobased Preforms1.jpeg',
+    gallery: [
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Pla Biobased Preforms1.jpeg',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Pla Biobased Preforms2.avif',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE BAGS & BOTTLE/Pla Biobased Preforms3.jfif'
+    ]
+    }
 ];

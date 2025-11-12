@@ -130,7 +130,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                       onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#2B58A0] focus:border-transparent outline-none transition-colors"
-                      placeholder="+1 (555) 123-4567"
+                      placeholder="+91 76981 07075"
                     />
                   </div>
                 </div>
@@ -169,7 +169,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
 
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 rounded-lg p-4 text-green-800">
-                    Thank you! Your email client should open with your message pre-filled. If it doesn't open automatically, please email us at info@aventorainternational.com
+                    Message received! Our team will get back to you as soon as possible.
                   </div>
                 )}
 
@@ -215,8 +215,8 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                    <p className="text-gray-600">+1 (555) 123-4567</p>
-                    <p className="text-gray-600">+1 (555) 765-4321</p>
+                    <p className="text-gray-600">+91 76981 07075</p>
+                    
                   </div>
                 </div>
 
@@ -233,16 +233,16 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[#FF6F4E] p-3 rounded-lg">
+                  <div className="bg-[#25D366] p-3 rounded-lg">
                     <MessageCircle className="h-6 w-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">WhatsApp</h3>
                     <a
-                      href="https://wa.me/15551234567"
+                      href="https://wa.me/917698107075"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-[#FF6F4E] transition-colors"
+                      className="text-gray-600 hover:text-[#25D366] transition-colors"
                     >
                       Chat with us on WhatsApp
                     </a>

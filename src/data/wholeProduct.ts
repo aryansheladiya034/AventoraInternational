@@ -50,7 +50,9 @@ const createWholeProduct = (
 };
 
 export const wholeProducts: Product[] = [
-    createWholeProduct(
+{
+
+   ...createWholeProduct(
         'Green Cardamom',
         [
             'Botanical Name: Elettaria Cardamomum',
@@ -66,8 +68,16 @@ export const wholeProducts: Product[] = [
         ],
         ['Aromatic Excellence', 'Premium Grade', 'Hand-Selected']
     ),
+    image: '/images/products/spices/whole-spices/green-cardamom-1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/green-cardamom-1.webp',
+        '/images/products/spices/whole-spices/green-cardamom-2.webp',
+        '/images/products/spices/whole-spices/green-cardamom-3.webp'
+    ]
     
-    createWholeProduct(
+},
+{
+    ...createWholeProduct(
         'Cumin Seeds',
         [
             'Origin: India',
@@ -84,8 +94,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Machine Cleaned', 'Sortex Cleaned', 'Multiple Purity Grades']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/cumin1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/cumin1.webp',
+        '/images/products/spices/whole-spices/cumin2.webp',
+        '/images/products/spices/whole-spices/cumin3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Dry Red Chili',
         [
             'Botanical Name: Capsicum Frutescens',
@@ -104,8 +121,16 @@ export const wholeProducts: Product[] = [
         ],
         ['Multiple Varieties', 'Rich Color', 'High Heat Level']
     ),
+    image: '/images/products/spices/whole-spices/dried-chilli1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/dried-chilli1.webp',
+        '/images/products/spices/whole-spices/dried-chilli2.webp',
+        '/images/products/spices/whole-spices/dried-chilli3.webp'
+    ]
+},  
     
-    createWholeProduct(
+{
+    ...createWholeProduct(
         'Cloves',
         [
             'Botanical Name: Eugenia Caryophylus',
@@ -122,8 +147,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Handpicked Quality', 'Strong Aroma', 'Natural Brown Color']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/cloves1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/cloves1.webp',
+        '/images/products/spices/whole-spices/cloves2.webp',
+        '/images/products/spices/whole-spices/cloves3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Black Pepper',
         [
             'Botanical Name: Piper Nigrum',
@@ -141,8 +173,15 @@ export const wholeProducts: Product[] = [
         ],
         ['King of Spices', 'Multiple Size Grades', 'High Purity']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/black-papper1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/black-papper1.webp',
+        '/images/products/spices/whole-spices/black-papper2.webp',
+        '/images/products/spices/whole-spices/black-papper3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Coriander Seeds',
         [
             'Type: Machine Clean & Sortex Clean',
@@ -160,8 +199,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Multiple Grades Available', 'Versatile Forms', 'Premium Sorting']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/coriander-seed1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/coriander-seed1.webp',
+        '/images/products/spices/whole-spices/coriander-seed2.webp',
+        '/images/products/spices/whole-spices/coriander-seed3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Turmeric Dried',
         [
             'Scientific Name: Curcuma Longa',
@@ -182,8 +228,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Golden Spice', 'Natural Curcumin', 'Medicinal Properties']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/turmeric-dried1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/turmeric-dried1.webp',
+        '/images/products/spices/whole-spices/turmeric-dried2.webp',
+        '/images/products/spices/whole-spices/turmeric-dried3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Fennel Seeds',
         [
             'Scientific Name: Anethum Graveolens',
@@ -207,8 +260,16 @@ export const wholeProducts: Product[] = [
         ],
         ['Sweet Aroma', 'Digestive Properties', 'Multiple Purity Grades']
     ),
+    image: '/images/products/spices/whole-spices/fennel-seeds1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/fennel-seeds1.webp',
+        '/images/products/spices/whole-spices/fennel-seeds2.webp',
+        '/images/products/spices/whole-spices/fennel-seeds3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
     
-    createWholeProduct(
         'Fenugreek Seeds',
         [
             'Type: Machine Clean & Sortex Clean',
@@ -226,8 +287,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Distinctive Flavor', 'Health Benefits', 'Clean Sorting']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/fenugreek-seeds1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/fenugreek-seeds1.webp',
+        '/images/products/spices/whole-spices/fenugreek-seeds2.webp',
+        '/images/products/spices/whole-spices/fenugreek-seeds3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Mustard Seeds',
         [
             'Color Varieties: Black, Brown, Yellow (White)',
@@ -244,8 +312,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Multiple Color Varieties', 'High Oil Content', 'Superior Purity']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/mustard-seed1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/mustard-seed1.webp',
+        '/images/products/spices/whole-spices/mustard-seed2.webp',
+        '/images/products/spices/whole-spices/mustard-seed3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Nutmeg',
         [
             'Scientific Name: Myristica',
@@ -261,8 +336,15 @@ export const wholeProducts: Product[] = [
         ],
         ['Aromatic Warmth', 'Premium Whole', 'Counted Quality']
     ),
-    
-    createWholeProduct(
+    image: '/images/products/spices/whole-spices/nutmeg1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/nutmeg1.webp',
+        '/images/products/spices/whole-spices/nutmeg2.webp',
+        '/images/products/spices/whole-spices/nutmeg3.webp'
+    ]
+},
+{
+    ...createWholeProduct(
         'Tamarind',
         [
             'Botanical Name: Tamarindus Indica',
@@ -276,7 +358,14 @@ export const wholeProducts: Product[] = [
             'Shelf Life: 1 Year From Production Date'
         ],
         ['Multiple Quality Grades', 'Tangy Flavor', 'Flexible Packaging']
-    )
+    ),
+    image: '/images/products/spices/whole-spices/tamarind1.webp',
+    gallery: [
+        '/images/products/spices/whole-spices/tamarind1.webp',
+        '/images/products/spices/whole-spices/tamarind2.webp',
+        '/images/products/spices/whole-spices/tamarind3.webp'
+    ]
+}
 ];
 
 

@@ -1,0 +1,2 @@
+The image needs to be saved manually. Please save the global delivery map image as:
+/Users/ramshekhada/Desktop/AventoraInternational_BOLT-main/public/images/global-delivery.png

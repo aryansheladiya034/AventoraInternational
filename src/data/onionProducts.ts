@@ -53,34 +53,74 @@ const createOnionProduct = (
 };
 
 export const onionProducts: Product[] = [
-  createOnionProduct(
-    'Dehydrated Onion Chopped',
-    '8 to 15 mm',
-    '14 MTS (20 FT), 24 MTS (40FT)',
-    '20/25 Kgs PP Bag/Cartoon Box or Customized'
-  ),
-  createOnionProduct(
-    'Dehydrated Onion Flakes',
-    '8 to 15 mm',
-    '7.5 MTS (20 FT), 16 MTS (40FT)',
-    '10/12/14 Kgs PP Bag/Cartoon Box or Customized'
-  ),
-  createOnionProduct(
-    'Dehydrated Onion Granules',
-    'Granules – 0.5 x 1.0 mm, 24 x 40 mesh, 40 x 60 mesh, 40 x 80 mesh',
-    '14 MTS (20 FT), 24 MTS (40FT)',
-    '20/25 Kgs PP Bag/Cartoon Box or Customized'
-  ),
-  createOnionProduct(
-    'Dehydrated Onion Minced',
-    '1 to 3 mm',
-    '14 MTS (20 FT), 24 MTS (40FT)',
-    '20/25 Kgs PP Bag/Cartoon Box or Customized'
-  ),
-  createOnionProduct(
-    'Dehydrated Onion Powder',
-    'Powder – 100 or 120 Mesh',
-    '15 MTS (20 FT), 28 MTS (40FT)',
-    '20/25 Kgs PP Bag/Cartoon Box or Customized'
-  )
+  {
+    ...createOnionProduct(
+      'Dehydrated Onion Chopped',
+      '8 to 15 mm',
+      '14 MTS (20 FT), 24 MTS (40FT)',
+      '20/25 Kgs PP Bag/Cartoon Box or Customized'
+    ),
+    image: '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-chopped-1.webp',
+    gallery: [
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-chopped-1.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-chopped-02.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-chopped-3.webp'
+    ]
+  },
+  {
+    ...createOnionProduct(
+      'Dehydrated Onion Flakes',
+      '8 to 15 mm',
+      '7.5 MTS (20 FT), 16 MTS (40FT)',
+      '10/12/14 Kgs PP Bag/Cartoon Box or Customized'
+    ),
+    image: '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-flakes1.webp',
+    gallery: [
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-flakes1.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-flakes2.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-flakes3.webp'
+    ]
+  },
+  {
+    ...createOnionProduct(
+      'Dehydrated Onion Granules',
+      'Granules – 0.5 x 1.0 mm, 24 x 40 mesh, 40 x 60 mesh, 40 x 80 mesh',
+      '14 MTS (20 FT), 24 MTS (40FT)',
+      '20/25 Kgs PP Bag/Cartoon Box or Customized'
+    ),
+    image: '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-granules1.webp',
+    gallery: [
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-granules1.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-granules2.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-granules3.webp'
+    ]
+  },
+  {
+    ...createOnionProduct(
+      'Dehydrated Onion Minced',
+      '1 to 3 mm',
+      '14 MTS (20 FT), 24 MTS (40FT)',
+      '20/25 Kgs PP Bag/Cartoon Box or Customized'
+    ),
+    image: '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-minced1.webp',
+    gallery: [
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-minced1.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-minced2.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-minced3.webp'
+    ]
+  },
+  {
+    ...createOnionProduct(
+      'Dehydrated Onion Powder',
+      'Powder – 100 or 120 Mesh',
+      '15 MTS (20 FT), 28 MTS (40FT)',
+      '20/25 Kgs PP Bag/Cartoon Box or Customized'
+    ),
+    image: '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-powder1.webp',
+    gallery: [
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-powder1.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-powder2.webp',
+      '/images/products/dehydrated/dehydrated-onion/dehydrated-onion-powder3.webp'
+    ]
+  }
 ];

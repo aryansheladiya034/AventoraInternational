@@ -49,7 +49,9 @@ const createLentilProduct = (
 };
 
 export const lentilsProducts: Product[] = [
-    createLentilProduct(
+    {
+        ...createLentilProduct(
+    
         'Masoor Dal',
         [
             'Scientific Name: Lens Culinaris',
@@ -68,8 +70,16 @@ export const lentilsProducts: Product[] = [
         ],
         ['Fast Cooking', 'High Iron Content', 'Both Skinned & Unskinned Available']
     ),
+    image: '/images/products/pulses/lentils/masoor-dal1.webp',
+    gallery: [
+        '/images/products/pulses/lentils/masoor-dal1.webp',
+        '/images/products/pulses/lentils/masoor-dal2.webp',
+        '/images/products/pulses/lentils/masoor-dal3.webp'
+    ]
+  },
     
-    createLentilProduct(
+    {
+        ...createLentilProduct(
         'Mung Dal',
         [
             'Scientific Name: Vigna Radiata',
@@ -87,8 +97,16 @@ export const lentilsProducts: Product[] = [
         ],
         ['High Protein Content', 'Rich in Magnesium', 'Easy to Digest']
     ),
+    image: '/images/products/pulses/lentils/mung-dal1.webp',
+    gallery: [
+        '/images/products/pulses/lentils/mung-dal1.webp',
+        '/images/products/pulses/lentils/mung-dal2.webp',
+        '/images/products/pulses/lentils/mung-dal3.webp'
+    ]
+  },
     
-    createLentilProduct(
+     {
+    ...createLentilProduct(
         'Toor Dal',
         [
             'Scientific Name: Cajanus Cajan',
@@ -106,8 +124,16 @@ export const lentilsProducts: Product[] = [
         ],
         ['Most Popular Dal', 'Rich Flavor', 'High Protein']
     ),
+    image: '/images/products/pulses/lentils/toor-dal1.webp',
+    gallery: [
+        '/images/products/pulses/lentils/toor-dal1.webp',
+        '/images/products/pulses/lentils/toor-dal2.webp',
+        '/images/products/pulses/lentils/toor-dal3.webp'
+    ]
+    },
     
-    createLentilProduct(
+    {
+    ...createLentilProduct(
         'Urad Dal',
         [
             'Scientific Name: Vigna Mungo',
@@ -124,5 +150,12 @@ export const lentilsProducts: Product[] = [
             'Storage Condition: Cool and Dry Place'
         ],
         ['Multiple Processing Types', 'Low Moisture', 'Premium Quality']
-    )
+    ),
+    image: '/images/products/pulses/lentils/urad-dal1.webp',
+    gallery: [
+        '/images/products/pulses/lentils/urad-dal1.webp',
+        '/images/products/pulses/lentils/urad-dal2.webp',
+        '/images/products/pulses/lentils/urad-dal3.webp'
+    ]
+    }
 ];

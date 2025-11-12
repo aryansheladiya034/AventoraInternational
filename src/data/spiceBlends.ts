@@ -49,7 +49,7 @@ const createSpiceBlendProduct = (
 };
 
 export const spiceBlendProducts: Product[] = [
-    createSpiceBlendProduct(
+    {...createSpiceBlendProduct(
         'Garam Masala',
         [
             'Botanical Name: Blend of Various Spices (Coriander, Cumin, Clove, Cinnamon, Black Pepper, Cardamom, Nutmeg, etc.)',
@@ -68,8 +68,14 @@ export const spiceBlendProducts: Product[] = [
         ],
         ['Traditional Recipe', 'Warming Spices', 'Versatile Use']
     ),
-    
-    createSpiceBlendProduct(
+    image: '/images/products/spices/spices-blends/garam-masala-powder1.webp',
+    gallery: [
+        '/images/products/spices/spices-blends/garam-masala-powder1.webp',
+        '/images/products/spices/spices-blends/garam-masala-powder2.webp',
+        '/images/products/spices/spices-blends/garam-masala-powder3.webp'
+    ]
+    },
+    {...createSpiceBlendProduct(
         'Chat Masala',
         [
             'Botanical Name: Blend of Various Spices (Black Salt, Dry Mango Powder, Cumin, Coriander, Asafoetida, etc.)',
@@ -88,8 +94,15 @@ export const spiceBlendProducts: Product[] = [
         ],
         ['Tangy Flavor', 'Street Food Essential', 'Unique Blend']
     ),
-    
-    createSpiceBlendProduct(
+    image: '/images/products/spices/spices-blends/chat-masala1.webp',
+    gallery: [
+        '/images/products/spices/spices-blends/chat-masala1.webp',
+        '/images/products/spices/spices-blends/chat-masala2.webp',
+        '/images/products/spices/spices-blends/chat-masala3.webp'
+    ]
+    },
+    {
+    ...createSpiceBlendProduct(
         'Chicken Masala',
         [
             'Botanical Name: Blend of Dehydrated Chicken Extract, Spices, Salt, Starch, Flavoring Agents',
@@ -109,8 +122,15 @@ export const spiceBlendProducts: Product[] = [
         ],
         ['Savory Profile', 'Umami Rich', 'Vegetarian Option Available']
     ),
-    
-    createSpiceBlendProduct(
+    image: '/images/products/spices/spices-blends/chicken-masala-powder1.webp',
+    gallery: [
+        '/images/products/spices/spices-blends/chicken-masala-powder1.webp',
+        '/images/products/spices/spices-blends/chicken-masala-powder2.webp',
+        '/images/products/spices/spices-blends/chicken-masala-powder3.webp'
+    ]
+    },
+    {
+    ...createSpiceBlendProduct(
         'Garlic Flax Powder',
         [
             'Botanical Name: Allium sativum',
@@ -131,5 +151,12 @@ export const spiceBlendProducts: Product[] = [
             'Microbiological Parameters: As Per Requirement & Importing Country Norms'
         ],
         ['Intense Garlic Flavor', 'High Purity', 'Custom Mesh Size']
-    )
+    ),
+    image: '/images/products/spices/spices-blends/garlic-flakes-powder1.webp',
+    gallery: [
+        '/images/products/spices/spices-blends/garlic-flakes-powder1.webp',
+        '/images/products/spices/spices-blends/garlic-flakes-powder2.webp',
+        '/images/products/spices/spices-blends/garlic-flakes-powder3.webp'
+    ]
+    }
 ];

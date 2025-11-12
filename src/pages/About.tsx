@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Eye, Award, Users, Globe, TrendingUp } from 'lucide-react';
+import { Target, Eye, Award, Users, Globe, TrendingUp, Package, Smile, Calendar } from 'lucide-react';
 
 const About: React.FC = () => {
   const coreValues = [
@@ -26,41 +26,44 @@ const About: React.FC = () => {
     },
   ];
 
-  const milestones = [
-    { year: '2018', event: 'Aventora International founded in Surat, Gujarat' },
-    { year: '2019', event: 'Established premium spices and pulses export operations' },
-    { year: '2020', event: 'Expanded to eco-friendly compostable items and rice exports' },
-    { year: '2021', event: 'Achieved international quality certifications' },
-    { year: '2023', event: 'Reached global customer base across multiple continents' },
-    { year: '2025', event: 'Leading exporter of premium Indian agricultural products' },
-  ];
-
   return (
     <div className="bg-white">
       <section className="bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">About Us</h1>
           <p className="text-xl text-gray-100 max-w-3xl mx-auto">
-            Your trusted partner in global trade since 2018
+            Your trusted partner in global trade since 2019
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg max-w-none">
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Increase your international business with us — Aventora International is proudly recognized by our valued global customers as a trusted and reputed international trading company known for its quality, integrity, and reliability.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Established in 2018 in Surat, Gujarat (India), Aventora International is a leading exporter and supplier of premium spices, pulses, rice, and eco-friendly compostable items. With a strong commitment to excellence, we ensure that every product we deliver meets global quality standards and aligns perfectly with our clients' expectations across international markets.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed mb-6">
-              Our operations are built on ethical sourcing, efficient logistics, and long-term partnerships. We continuously strive to expand our reach by offering consistent quality, sustainable solutions, and personalized service.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              We aim to strengthen our position in the global marketplace and contribute to sustainable international trade, connecting India's finest products with the world.
-            </p>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="prose prose-lg max-w-none">
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Increase your international business with us — Aventora International is proudly recognized by our valued global customers as a trusted and reputed international trading company known for its quality, integrity, and reliability.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Established in 2019 in Surat, Gujarat (India), Aventora International is a leading exporter and supplier of premium spices, pulses, rice, and eco-friendly compostable items. With a strong commitment to excellence, we ensure that every product we deliver meets global quality standards and aligns perfectly with our clients' expectations across international markets.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                Our operations are built on ethical sourcing, efficient logistics, and long-term partnerships. We continuously strive to expand our reach by offering consistent quality, sustainable solutions, and personalized service.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We aim to strengthen our position in the global marketplace and contribute to sustainable international trade, connecting India's finest products with the world.
+              </p>
+            </div>
+            
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img 
+                  src="/images/global-delivery.jpg" 
+                  alt="Global Delivery Network" 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -119,46 +122,177 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Certificates Section with Scrolling Animation */}
+      <section className="py-16 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-lg text-gray-600">Key milestones in our growth story</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Certifications</h2>
+            <p className="text-lg text-gray-600">
+              Trusted and certified by leading authorities
+            </p>
           </div>
 
+          {/* Scrolling Container */}
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-[#2B58A0] hidden md:block"></div>
-
-            <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div
-                  key={index}
-                  className={`flex flex-col md:flex-row items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                    }`}
-                >
-                  <div className="flex-1 md:text-right md:pr-8">
-                    {index % 2 === 0 && (
-                      <div className="bg-white rounded-lg p-6 shadow-md">
-                        <span className="text-2xl font-bold text-[#2B58A0]">{milestone.year}</span>
-                        <p className="text-gray-700 mt-2">{milestone.event}</p>
-                      </div>
-                    )}
-                  </div>
-
-                  <div className="relative z-10 my-4 md:my-0">
-                    <div className="w-6 h-6 bg-[#FF6F4E] rounded-full border-4 border-white shadow-lg"></div>
-                  </div>
-
-                  <div className="flex-1 md:pl-8">
-                    {index % 2 !== 0 && (
-                      <div className="bg-white rounded-lg p-6 shadow-md">
-                        <span className="text-2xl font-bold text-[#2B58A0]">{milestone.year}</span>
-                        <p className="text-gray-700 mt-2">{milestone.event}</p>
-                      </div>
-                    )}
-                  </div>
+            <div className="flex animate-scroll-certificates space-x-8">
+              {/* First set of certificates */}
+              <div className="flex space-x-8 flex-shrink-0">
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/APEDA.png" 
+                    alt="APEDA Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
                 </div>
-              ))}
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/Digital India_1.jpg" 
+                    alt="Digital India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/FSSAI.png" 
+                    alt="FSSAI Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/Make in India.jpg" 
+                    alt="Make in India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/dgft.jpg" 
+                    alt="DGFT Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/gst.png" 
+                    alt="GST Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/iso.png" 
+                    alt="ISO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/msme.jpg" 
+                    alt="MSME Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </div>
+              {/* Duplicate set for seamless loop */}
+              <div className="flex space-x-8 flex-shrink-0">
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/APEDA.png" 
+                    alt="APEDA Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/Digital India_1.jpg" 
+                    alt="Digital India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/FSSAI.png" 
+                    alt="FSSAI Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/Make in India.jpg" 
+                    alt="Make in India Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/dgft.jpg" 
+                    alt="DGFT Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/gst.png" 
+                    alt="GST Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/iso.png" 
+                    alt="ISO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                  <img 
+                    src="/images/CErtificate/msme.jpg" 
+                    alt="MSME Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-br from-[#2B58A0] to-[#1e3f70]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Achievements</h2>
+            <p className="text-lg text-gray-200">
+              Delivering excellence in global trade
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+              <div className="flex justify-center mb-4">
+                <Package className="h-16 w-16 text-[#FF6F4E]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">120+</h3>
+              <p className="text-xl font-semibold text-gray-800 mb-2">Consignments</p>
+              <p className="text-gray-600">Successfully delivered worldwide</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+              <div className="flex justify-center mb-4">
+                <Smile className="h-16 w-16 text-[#FF6F4E]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">40+</h3>
+              <p className="text-xl font-semibold text-gray-800 mb-2">Happy Buyers</p>
+              <p className="text-gray-600">Trusted partners globally</p>
+            </div>
+
+            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+              <div className="flex justify-center mb-4">
+                <Calendar className="h-16 w-16 text-[#FF6F4E]" />
+              </div>
+              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">7+</h3>
+              <p className="text-xl font-semibold text-gray-800 mb-2">Years of Experience</p>
+              <p className="text-gray-600">In international trade</p>
             </div>
           </div>
         </div>

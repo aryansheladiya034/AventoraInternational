@@ -49,7 +49,8 @@ const createCompostableProduct = (
 };
 
 export const compostablePlatesProducts: Product[] = [
-    createCompostableProduct(
+    {
+        ...createCompostableProduct(
         '6" Round Plates',
         [
             'Diameter: 153 mm',
@@ -65,8 +66,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Compact Size', 'Lightweight', 'Perfect for Appetizers']
     ),
-    
-    createCompostableProduct(
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/6”ROUND DISH 1.jpg',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/6”ROUND DISH 1.jpg',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/6”ROUND DISH2.jpeg',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/6”ROUND DISH3.webp'
+    ]
+    },
+
+    {
+    ...createCompostableProduct(
         '7" Round Plates',
         [
             'Diameter: 175 mm',
@@ -82,8 +91,15 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Medium Size', 'Versatile Use', 'Side Dishes']
     ),
-    
-    createCompostableProduct(
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/7”ROUND DISH1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/7”ROUND DISH1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/7”ROUND DISH2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/7”ROUND DISH3.jpeg'
+    ]
+    },
+    {
+    ...createCompostableProduct(
         '9" Round Plates',
         [
             'Diameter: 229 mm',
@@ -99,8 +115,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Standard Dinner Size', 'Popular Choice', 'Main Courses']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9”ROUND DISH1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9”ROUND DISH1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9”ROUND DISH2.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9”ROUND DISH3.webp'
+    ]
+    },
     
-    createCompostableProduct(
+    {
+    ...createCompostableProduct(
         '10" Round Plates',
         [
             'Diameter: 225 mm',
@@ -116,8 +140,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Large Dinner Size', 'Heavy Duty', 'Restaurant Quality']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10”ROUND DISH1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10”ROUND DISH1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10”ROUND DISH2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10”ROUND DISH3.jpeg'
+    ]
+    },
     
-    createCompostableProduct(
+     {
+    ...createCompostableProduct(
         '11" Round Plates',
         [
             'Diameter: 275 mm',
@@ -133,8 +165,15 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Extra Large', 'Premium Size', 'Buffet Service']
     ),
-    
-    createCompostableProduct(
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11”ROUND DISH1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11”ROUND DISH1.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11”ROUND DISH2.webp',
+        '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11”ROUND DISH3.jpeg'
+        ]
+        },
+        {
+    ...createCompostableProduct(
         '12" Round Plates',
         [
             'Diameter: 305 mm',
@@ -150,8 +189,15 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['Largest Size', 'Premium Quality', 'Catering Events']
     ),
-    
-    createCompostableProduct(
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12”ROUND DISH1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12”ROUND DISH1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12”ROUND DISH2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12”ROUND DISH3.jpeg'
+    ]
+    },
+    {
+    ... createCompostableProduct(
         '9" 3 CP Round Plates',
         [
             'Diameter: 229 mm',
@@ -168,8 +214,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['3 Compartments', 'Portion Control', 'Multi-Food Service']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9” 3 CP ROUND DISH 1.webp',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9” 3 CP ROUND DISH 1.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9” 3 CP ROUND DISH 2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/9” 3 CP ROUND DISH 3.webp'
+    ]
+    },
     
-    createCompostableProduct(
+     {
+    ... createCompostableProduct(
         '10" 3 CP Round Plates',
         [
             'Diameter: 255 mm',
@@ -186,8 +240,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['3 Compartments', 'Large Size', 'Complete Meal Service']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10” 3 CP ROUND DISH1.jpg',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10” 3 CP ROUND DISH1.jpg',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10” 3 CP ROUND DISH2.webp',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/10” 3 CP ROUND DISH3.webp'
+    ]
+    },
     
-    createCompostableProduct(
+     {
+    ... createCompostableProduct(
         '11" 4 CP Round Plates',
         [
             'Diameter: 272 mm',
@@ -204,8 +266,16 @@ export const compostablePlatesProducts: Product[] = [
         ],
         ['4 Compartments', 'Premium Dining', 'Variety Meals']
     ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11” 4 CP ROUND DISH1.jfif',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11” 4 CP ROUND DISH1.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11” 4 CP ROUND DISH2.png',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/11” 4 CP ROUND DISH3.jfif'
+    ]
+    },
     
-    createCompostableProduct(
+     {
+    ... createCompostableProduct(
         '12" 4 CP Round Plates',
         [
             'Diameter: 305 mm',
@@ -221,5 +291,12 @@ export const compostablePlatesProducts: Product[] = [
             'Oil Resistant: Yes'
         ],
         ['4 Compartments', 'Largest Size', 'Premium Catering']
-    )
+    ),
+    image: '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12” 4 CP ROUND DISH1.jfif',
+    gallery: [
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12” 4 CP ROUND DISH1.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12” 4 CP ROUND DISH2.jfif',
+      '/images/products/COMPOSTABLE TABLEWARE/COMPOSTABLE PLATES/12” 4 CP ROUND DISH3.jpg'
+    ]
+    }
 ];

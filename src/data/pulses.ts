@@ -49,7 +49,7 @@ const createPulseProduct = (
 };
 
 export const pulsesProducts: Product[] = [
-    createPulseProduct(
+    {...createPulseProduct(
         'Black Eye Bean',
         [
             'Count Per 100gms: 390, 420, 450, 480, 500, 550',
@@ -65,8 +65,15 @@ export const pulsesProducts: Product[] = [
         ],
         ['Multiple Count Options', 'High Fiber Content', 'Rich in Folate']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/black-eye-beans1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/black-eye-beans1.webp',
+        '/images/products/pulses/pulses/black-eyed-bean2.webp',
+        '/images/products/pulses/pulses/black-eye-bean3.webp'
+    ]
+    },
+    {
+    ...createPulseProduct(
         'Chickpeas (White/Black)',
         [
             'Scientific Name: Cicer Arietinum',
@@ -86,8 +93,14 @@ export const pulsesProducts: Product[] = [
         ],
         ['Multiple Size Grades', 'White & Black Varieties', 'Premium Sorting']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/chickpeas1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/chickpeas1.webp',
+        '/images/products/pulses/pulses/chickpeas2.webp',
+        '/images/products/pulses/pulses/chickpea3.webp'
+    ]
+    },
+    {...createPulseProduct(
         'Brown Eye Bean',
         [
             'Count Per 100gms: 380, 400, 430, 460, 500 (or as per customer requirement)',
@@ -103,8 +116,14 @@ export const pulsesProducts: Product[] = [
         ],
         ['Flexible Count Options', 'Nutritious Choice', 'Quality Assured']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/brown-eye-bean1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/brown-eye-bean1.webp',
+        '/images/products/pulses/pulses/brown-eye-bean2.webp',
+        '/images/products/pulses/pulses/brown-eye-bean3.webp'
+    ]
+    },
+    {...createPulseProduct(
         'Red Kidney Bean',
         [
             'Count Per 100gms: 160–180, 180–200, 200–220 (or as per customer requirement)',
@@ -120,8 +139,15 @@ export const pulsesProducts: Product[] = [
         ],
         ['Large Size Beans', 'Rich Red Color', 'High Protein']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/red-kideny-bean1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/red-kideny-bean1.webp',
+        '/images/products/pulses/pulses/red-kideny-bean2.webp',
+        '/images/products/pulses/pulses/red-kideny-bean3.webp'
+    ]
+    },
+{
+    ...createPulseProduct(
         'Soybean',
         [
             'Scientific Name: Glycine Max',
@@ -142,8 +168,15 @@ export const pulsesProducts: Product[] = [
         ],
         ['Highest Protein Content', 'Oil Rich', 'Complete Amino Profile']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/soyabean1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/soyabean1.webp',
+        '/images/products/pulses/pulses/soyabean2.webp',
+        '/images/products/pulses/pulses/soyabean3.webp'
+    ]
+    },
+    {
+    ...createPulseProduct(
         'Green Peas',
         [
             'Scientific Name: Pisum Sativum',
@@ -163,8 +196,15 @@ export const pulsesProducts: Product[] = [
         ],
         ['Natural Green Color', 'Custom Size Available', 'Low Impurity Levels']
     ),
-    
-    createPulseProduct(
+    image: '/images/products/pulses/pulses/green-peas1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/green-peas1.webp',
+        '/images/products/pulses/pulses/green-peas2.webp',
+        '/images/products/pulses/pulses/green-peas3.webp'
+    ]
+    },
+    {
+    ...createPulseProduct(
         'Green Mung',
         [
             'Scientific Name: Vigna Radiata',
@@ -183,8 +223,16 @@ export const pulsesProducts: Product[] = [
         ],
         ['Regular & Bold Sizes', 'High Purity', 'Easy to Digest']
     ),
+    image: '/images/products/pulses/pulses/green-mung1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/green-mung1.webp',
+        '/images/products/pulses/pulses/green-mung2.webp',
+        '/images/products/pulses/pulses/green-mung3.webp'
+    ]
+    },
+    {
+    ...createPulseProduct(
     
-    createPulseProduct(
         'Moth Beans',
         [
             'Scientific Name: Vigna Aconitifolia',
@@ -201,5 +249,12 @@ export const pulsesProducts: Product[] = [
             'Storage Condition: Cool and Dry Place'
         ],
         ['High Magnesium Content', 'Iron Rich', 'Drought Resistant Crop']
-    )
+    ),
+    image: '/images/products/pulses/pulses/moth-beans1.webp',
+    gallery: [
+        '/images/products/pulses/pulses/moth-beans1.webp',
+        '/images/products/pulses/pulses/moth-beans2.webp',
+        '/images/products/pulses/pulses/moth-beans3.webp'
+    ]
+    }
 ];

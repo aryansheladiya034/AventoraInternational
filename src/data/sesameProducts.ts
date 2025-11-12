@@ -56,36 +56,68 @@ const createSesameProduct = (
 };
 
 export const sesameProducts: Product[] = [
-  createSesameProduct(
-    'Hulled White Sesame Seeds',
-    '99.95% min',
-    '4% max',
-    '48–52%',
-    '1.5% max',
-    '0.05% max'
-  ),
-  createSesameProduct(
-    'Natural White Sesame Seeds',
-    '99.90% min',
-    '6% max',
-    '50–54%',
-    '2% max',
-    '0.10% max'
-  ),
-  createSesameProduct(
-    'Black Sesame Seeds',
-    '99.90% min',
-    '5% max',
-    '45–50%',
-    '2% max',
-    '0.10% max'
-  ),
-  createSesameProduct(
-    'Brown Sesame Seeds',
-    '99% to 99.90%',
-    '6% max',
-    '48–52%',
-    '2% max',
-    '0.10% max'
-  )
+  {
+    ...createSesameProduct(
+      'Hulled White Sesame Seeds',
+      '99.95% min',
+      '4% max',
+      '48–52%',
+      '1.5% max',
+      '0.05% max'
+    ),
+    image: '/images/products/oil-seeds/sesame/white-sesame1.webp',
+    gallery: [
+      '/images/products/oil-seeds/sesame/white-sesame1.webp',
+      '/images/products/oil-seeds/sesame/white-sesame2.webp',
+      '/images/products/oil-seeds/sesame/white-sesame3.webp'
+    ]
+  },
+  {
+    ...createSesameProduct(
+      'Natural White Sesame Seeds',
+      '99.90% min',
+      '6% max',
+      '50–54%',
+      '2% max',
+      '0.10% max'
+    ),
+    image: '/images/products/oil-seeds/sesame/white-sesame1.webp',
+    gallery: [
+      '/images/products/oil-seeds/sesame/white-sesame1.webp',
+      '/images/products/oil-seeds/sesame/white-sesame2.webp',
+      '/images/products/oil-seeds/sesame/white-sesame3.webp'
+    ]
+  },
+  {
+    ...createSesameProduct(
+      'Black Sesame Seeds',
+      '99.90% min',
+      '5% max',
+      '45–50%',
+      '2% max',
+      '0.10% max'
+    ),
+    image: '/images/products/oil-seeds/sesame/black-sesame-1.webp',
+    gallery: [
+      '/images/products/oil-seeds/sesame/black-sesame-1.webp',
+      '/images/products/oil-seeds/sesame/black-sesame2.webp',
+      '/images/products/oil-seeds/sesame/black-sesame-3.webp'
+    ]
+  },
+  {
+    ...createSesameProduct(
+      'Brown Sesame Seeds',
+      '99% to 99.90%',
+      '6% max',
+      '48–52%',
+      '2% max',
+      '0.10% max'
+    ),
+    image: '/images/products/oil-seeds/sesame/brown-sesame-1.webp',
+    gallery: [
+      '/images/products/oil-seeds/sesame/brown-sesame-1.webp',
+      '/images/products/oil-seeds/sesame/brown-sesame2.webp',
+      '/images/products/oil-seeds/sesame/brown-sesame3.webp'
+    ]
+  }
 ];

@@ -119,7 +119,7 @@ const Layout: React.FC = () => {
               <h4 className="text-lg font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-sm text-gray-200">
                 <li>Email: info@aventorainternational.com</li>
-                <li>Phone: +1 (555) 123-4567</li>
+                <li>Phone: +91 76981 07075</li>
                 <li>Address: 123 Trade Center, Global City</li>
               </ul>
             </div>

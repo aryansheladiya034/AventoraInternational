@@ -161,8 +161,8 @@ export const productData: ProductData = {
       name: 'Dehydrated Products',
       slug: 'dehydrated-products',
       description: 'Premium dehydrated onion and garlic products with exceptional flavor and quality.',
-      icon: '🧅',
-      image: '/api/placeholder/600/400',
+      icon: '',
+      image: 'src/assets/images/products/Dehydrated Products profile.webp',
       subCategories: [
         {
           id: 'dehydrated-onion',
@@ -197,8 +197,8 @@ export const productData: ProductData = {
       name: 'Oil Seeds',
       slug: 'oil-seeds',
       description: 'Premium quality peanuts and sesame seeds for oil extraction and direct consumption.',
-      icon: '🥜',
-      image: '/api/placeholder/600/400',
+      icon: '',
+      image: 'src/assets/images/products/Oil Seeds Profile.avif',
       subCategories: [
         {
           id: 'peanut',
@@ -232,8 +232,8 @@ export const productData: ProductData = {
       name: 'Spices',
       slug: 'spices',
       description: 'Authentic whole spices, ground spices, and spice blends from India.',
-      icon: '🌶️',
-      image: '/api/placeholder/600/400',
+      icon: '',
+      image: 'src/assets/images/products/Spices Profile.jpg',
       subCategories: [
         {
           id: 'whole-spices',
@@ -290,8 +290,8 @@ export const productData: ProductData = {
       name: 'Pulses & Lentils',
       slug: 'pulses-lentils',
       description: 'High-protein pulses and lentils, essential ingredients for healthy cooking.',
-      icon: '🫘',
-      image: '/api/placeholder/600/400',
+      icon: '',
+      image: 'src/assets/images/products/Pulses & Lentils Profile.jpg',
       subCategories: [
         {
           id: 'pulses',
@@ -328,8 +328,8 @@ export const productData: ProductData = {
       name: 'Compostable Tableware',
       slug: 'compostable-tableware',
       description: 'Eco-friendly, biodegradable tableware made from sustainable materials.',
-      icon: '🍽️',
-      image: '/api/placeholder/600/400',
+      icon: '',
+      image: 'src/assets/images/products/CompostableTablewareProfile.png',
       subCategories: [
         {
           id: 'compostable-plates',
@@ -397,12 +397,12 @@ export const productData: ProductData = {
           slug: 'compostable-bags-bottles',
           description: 'Eco-friendly bags, bottles, and containers.',
           products: [
-            generateDummyProduct('Compostable Grocery Bags', 'compostable'),
-            generateDummyProduct('Compostable Garbage Bags', 'compostable'),
-            generateDummyProduct('Compostable Carry Bags', 'compostable'),
-            generateDummyProduct('Compostable PLA Bio Based Bottles', 'compostable'),
-            generateDummyProduct('Compostable PLA Ice Cream Cups', 'compostable'),
-            generateDummyProduct('PLA Biobased Preforms', 'compostable')
+              // generateDummyProduct('Compostable Grocery Bags', 'compostable'),
+              // generateDummyProduct('Compostable Garbage Bags', 'compostable'),
+              // generateDummyProduct('Compostable Carry Bags', 'compostable'),
+              // generateDummyProduct('Compostable PLA Bio Based Bottles', 'compostable'),
+              // generateDummyProduct('Compostable PLA Ice Cream Cups', 'compostable'),
+              // generateDummyProduct('PLA Biobased Preforms', 'compostable')
           ]
         }
       ]
@@ -411,118 +411,118 @@ export const productData: ProductData = {
 };
 
 // Rice data will be handled separately due to its special structure
-export const riceData = {
-  id: 'rice',
-  name: 'Rice',
-  slug: 'rice',
-  description: 'Premium Basmati and Non-Basmati rice varieties from India.',
-  icon: '🌾',
-  image: '/api/placeholder/600/400',
-  sections: [
-    {
-      id: 'basmati-rice',
-      name: 'Basmati Rice',
-      slug: 'basmati-rice',
-      description: 'World-renowned aromatic Basmati rice varieties.',
-      varieties: [
-        {
-          id: '1121-basmati',
-          name: '1121 Basmati Rice',
-          slug: '1121-basmati',
-          description: 'Premium long-grain aromatic Basmati rice.',
-          products: [
-            generateDummyProduct('1121 RAW Basmati Rice', 'rice'),
-            generateDummyProduct('1121 STEAM Basmati Rice', 'rice'),
-            generateDummyProduct('1121 GOLDEN Basmati Rice', 'rice'),
-            generateDummyProduct('1121 WHITE SELLA Basmati Rice', 'rice')
-          ]
-        },
-        {
-          id: '1509-basmati',
-          name: '1509 Basmati Rice',
-          slug: '1509-basmati',
-          description: 'Premium quality 1509 Basmati rice variety.',
-          products: [
-            generateDummyProduct('1509 STEAM Basmati Rice', 'rice'),
-            generateDummyProduct('1509 GOLDEN SELLA Basmati Rice', 'rice'),
-            generateDummyProduct('1509 WHITE SELLA Basmati Rice', 'rice')
-          ]
-        },
-        {
-          id: 'pusa-1401-basmati',
-          name: 'PUSA 1401 Basmati Rice',
-          slug: 'pusa-1401-basmati',
-          description: 'Traditional PUSA 1401 Basmati rice variety.',
-          products: [
-            generateDummyProduct('PUSA 1401 STEAM Basmati Rice', 'rice'),
-            generateDummyProduct('PUSA 1401 GOLDEN SELLA Basmati Rice', 'rice'),
-            generateDummyProduct('PUSA 1401 WHITE SELLA Basmati Rice', 'rice')
-          ]
-        }
-      ]
-    },
-    {
-      id: 'non-basmati-rice',
-      name: 'Non-Basmati Rice',
-      slug: 'non-basmati-rice',
-      description: 'High-quality Non-Basmati rice varieties for various applications.',
-      varieties: [
-        {
-          id: 'pr-11-14-rice',
-          name: 'PR 11/14 Rice',
-          slug: 'pr-11-14-rice',
-          description: 'Premium PR 11/14 rice variety.',
-          products: [
-            generateDummyProduct('PR 11/14 RAW Rice', 'rice'),
-            generateDummyProduct('PR 11/14 STEAM Rice', 'rice'),
-            generateDummyProduct('PR 11/14 GOLDEN SELLA Rice', 'rice'),
-            generateDummyProduct('PR 11/14 WHITE SELLA Rice', 'rice')
-          ]
-        },
-        {
-          id: 'sugandha-rice',
-          name: 'Sugandha Rice',
-          slug: 'sugandha-rice',
-          description: 'Aromatic Sugandha rice variety.',
-          products: [
-            generateDummyProduct('SUGANDHA STEAM Rice', 'rice'),
-            generateDummyProduct('SUGANDHA GOLDEN SELLA Rice', 'rice'),
-            generateDummyProduct('SUGANDHA WHITE SELLA Rice', 'rice')
-          ]
-        },
-        {
-          id: 'ir-64-rice',
-          name: 'IR-64 Rice',
-          slug: 'ir-64-rice',
-          description: 'High-yield IR-64 rice variety.',
-          products: [
-            generateDummyProduct('IR-64 5% BROKEN PARBOILED Rice', 'rice'),
-            generateDummyProduct('IR-64 5% BROKEN RAW Rice', 'rice'),
-            generateDummyProduct('IR-64 25% BROKEN PARBOILED Rice', 'rice'),
-            generateDummyProduct('IR-64 25% BROKEN RAW Rice', 'rice')
-          ]
-        },
-        {
-          id: 'sona-mansoori-rice',
-          name: 'Sona Mansoori Rice',
-          slug: 'sona-mansoori-rice',
-          description: 'Premium Sona Mansoori rice variety.',
-          products: [
-            generateDummyProduct('SONA MANSOORI RAW Rice', 'rice'),
-            generateDummyProduct('SONA MANSOORI STEAM Rice', 'rice')
-          ]
-        },
-        {
-          id: 'swarna-rice',
-          name: 'Swarna Rice',
-          slug: 'swarna-rice',
-          description: 'High-quality Swarna rice variety.',
-          products: [
-            generateDummyProduct('SWARNA RAW Rice', 'rice'),
-            generateDummyProduct('SWARNA PARBOILED Rice', 'rice')
-          ]
-        }
-      ]
-    }
-  ]
-};
+// export const riceData = {
+//   id: 'rice',
+//   name: 'Rice',
+//   slug: 'rice',
+//   description: 'Premium Basmati and Non-Basmati rice varieties from India.',
+//   icon: '🌾',
+//   image: '/api/placeholder/600/400',
+//   sections: [
+//     {
+//       id: 'basmati-rice',
+//       name: 'Basmati Rice',
+//       slug: 'basmati-rice',
+//       description: 'World-renowned aromatic Basmati rice varieties.',
+//       varieties: [
+//         {
+//           id: '1121-basmati',
+//           name: '1121 Basmati Rice',
+//           slug: '1121-basmati',
+//           description: 'Premium long-grain aromatic Basmati rice.',
+//           products: [
+//             generateDummyProduct('1121 RAW Basmati Rice', 'rice'),
+//             generateDummyProduct('1121 STEAM Basmati Rice', 'rice'),
+//             generateDummyProduct('1121 GOLDEN Basmati Rice', 'rice'),
+//             generateDummyProduct('1121 WHITE SELLA Basmati Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: '1509-basmati',
+//           name: '1509 Basmati Rice',
+//           slug: '1509-basmati',
+//           description: 'Premium quality 1509 Basmati rice variety.',
+//           products: [
+//             generateDummyProduct('1509 STEAM Basmati Rice', 'rice'),
+//             generateDummyProduct('1509 GOLDEN SELLA Basmati Rice', 'rice'),
+//             generateDummyProduct('1509 WHITE SELLA Basmati Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: 'pusa-1401-basmati',
+//           name: 'PUSA 1401 Basmati Rice',
+//           slug: 'pusa-1401-basmati',
+//           description: 'Traditional PUSA 1401 Basmati rice variety.',
+//           products: [
+//             generateDummyProduct('PUSA 1401 STEAM Basmati Rice', 'rice'),
+//             generateDummyProduct('PUSA 1401 GOLDEN SELLA Basmati Rice', 'rice'),
+//             generateDummyProduct('PUSA 1401 WHITE SELLA Basmati Rice', 'rice')
+//           ]
+//         }
+//       ]
+//     },
+//     {
+//       id: 'non-basmati-rice',
+//       name: 'Non-Basmati Rice',
+//       slug: 'non-basmati-rice',
+//       description: 'High-quality Non-Basmati rice varieties for various applications.',
+//       varieties: [
+//         {
+//           id: 'pr-11-14-rice',
+//           name: 'PR 11/14 Rice',
+//           slug: 'pr-11-14-rice',
+//           description: 'Premium PR 11/14 rice variety.',
+//           products: [
+//             generateDummyProduct('PR 11/14 RAW Rice', 'rice'),
+//             generateDummyProduct('PR 11/14 STEAM Rice', 'rice'),
+//             generateDummyProduct('PR 11/14 GOLDEN SELLA Rice', 'rice'),
+//             generateDummyProduct('PR 11/14 WHITE SELLA Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: 'sugandha-rice',
+//           name: 'Sugandha Rice',
+//           slug: 'sugandha-rice',
+//           description: 'Aromatic Sugandha rice variety.',
+//           products: [
+//             generateDummyProduct('SUGANDHA STEAM Rice', 'rice'),
+//             generateDummyProduct('SUGANDHA GOLDEN SELLA Rice', 'rice'),
+//             generateDummyProduct('SUGANDHA WHITE SELLA Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: 'ir-64-rice',
+//           name: 'IR-64 Rice',
+//           slug: 'ir-64-rice',
+//           description: 'High-yield IR-64 rice variety.',
+//           products: [
+//             // generateDummyProduct('IR-64 5% BROKEN PARBOILED Rice', 'rice'),
+//             // generateDummyProduct('IR-64 5% BROKEN RAW Rice', 'rice'),
+//             // generateDummyProduct('IR-64 25% BROKEN PARBOILED Rice', 'rice'),
+//             // generateDummyProduct('IR-64 25% BROKEN RAW Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: 'sona-mansoori-rice',
+//           name: 'Sona Mansoori Rice',
+//           slug: 'sona-mansoori-rice',
+//           description: 'Premium Sona Mansoori rice variety.',
+//           products: [
+//             generateDummyProduct('SONA MANSOORI RAW Rice', 'rice'),
+//             generateDummyProduct('SONA MANSOORI STEAM Rice', 'rice')
+//           ]
+//         },
+//         {
+//           id: 'swarna-rice',
+//           name: 'Swarna Rice',
+//           slug: 'swarna-rice',
+//           description: 'High-quality Swarna rice variety.',
+//           products: [
+//             generateDummyProduct('SWARNA RAW Rice', 'rice'),
+//             generateDummyProduct('SWARNA PARBOILED Rice', 'rice')
+//           ]
+//         }
+//       ]
+//     }
+//   ]
+// };

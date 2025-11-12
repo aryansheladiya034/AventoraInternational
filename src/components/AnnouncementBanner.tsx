@@ -1,46 +1,75 @@
 import React from 'react';
-import { X } from 'lucide-react';
+import { Phone, Mail, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 
 interface AnnouncementBannerProps {
   onClose: () => void;
 }
 
-const AnnouncementBanner: React.FC<AnnouncementBannerProps> = ({ onClose }) => {
-  const announcements = [
-    "🎉 BOGO OFFER: Buy One Get One Free on all Spice Blends - Limited Time!",
-    "🚢 Free Global Shipping on orders above $1000",
-    "⭐ New Product Alert: Premium Basmati Rice Collection now available",
-    "💰 Special Discount: 20% off on bulk orders for exporters",
-    "🌱 Certified Organic Products - Quality guaranteed from farm to table"
-  ];
-
+const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
   return (
-    <div className="bg-gradient-to-r from-[#FF6F4E] to-[#ff8a6d] text-white relative overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-2">
-        <div className="flex-1 overflow-hidden">
-          <div className="animate-scroll whitespace-nowrap">
-            <span className="inline-block">
-              {announcements.map((announcement, index) => (
-                <span key={index} className="mx-8 text-sm font-medium">
-                  {announcement}
-                </span>
-              ))}
-              {/* Duplicate for seamless loop */}
-              {announcements.map((announcement, index) => (
-                <span key={`duplicate-${index}`} className="mx-8 text-sm font-medium">
-                  {announcement}
-                </span>
-              ))}
-            </span>
-          </div>
+    <div className="bg-gradient-to-r from-[#FF6F4E] to-[#ff8a6d] text-white">
+      <div className="flex items-center justify-between px-4 py-3">
+        {/* Left spacer for balance */}
+        <div className="flex-1"></div>
+        
+        {/* Center content - Contact info */}
+        <div className="flex items-center justify-center gap-8">
+          <a 
+            href="tel:+917698107075" 
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <Phone className="h-5 w-5 font-bold" />
+            <span className="text-base font-bold">+91 76981 07075</span>
+          </a>
+          
+          <a 
+            href="mailto:info@aventorainternational.com" 
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+          >
+            <Mail className="h-5 w-5 font-bold" />
+            <span className="text-base font-bold">info@aventorainternational.com</span>
+          </a>
         </div>
-        <button
-          onClick={onClose}
-          className="ml-4 p-1 hover:bg-white/20 rounded-full transition-colors flex-shrink-0"
-          aria-label="Close announcement"
-        >
-          <X className="h-4 w-4" />
-        </button>
+        
+        {/* Right side - Social media icons */}
+        <div className="flex-1 flex items-center justify-end gap-3">
+          <a 
+            href="https://facebook.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            aria-label="Facebook"
+          >
+            <Facebook className="h-4 w-4" />
+          </a>
+          <a 
+            href="https://twitter.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            aria-label="X (Twitter)"
+          >
+            <Twitter className="h-4 w-4" />
+          </a>
+          <a 
+            href="https://instagram.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            aria-label="Instagram"
+          >
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a 
+            href="https://linkedin.com" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="h-4 w-4" />
+          </a>
+        </div>
       </div>
     </div>
   );

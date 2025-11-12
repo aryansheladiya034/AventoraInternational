@@ -19,3 +19,21 @@
 .animate-scroll:hover {
   animation-play-state: paused;
 }
+
+/* Certificate Carousel Scrolling Animation */
+@keyframes scrollCertificates {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-certificates {
+  animation: scrollCertificates 40s linear infinite;
+}
+
+.animate-scroll-certificates:hover {
+  animation-play-state: paused;
+}

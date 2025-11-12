@@ -26,17 +26,10 @@ const Home: React.FC = () => {
     },
   ];
 
-  const productCategories = [
-    { title: 'Agriculture', description: 'Fresh produce, grains, and agricultural commodities' },
-    { title: 'Textiles', description: 'Fabrics, garments, and textile materials' },
-    { title: 'Machinery', description: 'Industrial equipment and machinery parts' },
-    { title: 'Electronics', description: 'Consumer electronics and tech components' },
-    { title: 'FMCG', description: 'Fast-moving consumer goods and packaged products' },
-    { title: 'Raw Materials', description: 'Metals, minerals, and industrial raw materials' },
-  ];
+  
 
   const whyChooseUs = [
-    'Over 18 years of experience in global trade',
+    'Over 7 years of experience in global trade',
     'Comprehensive customs clearance and documentation support',
     'Real-time shipment tracking and transparency',
     '24/7 customer support across all time zones',
@@ -46,8 +39,17 @@ const Home: React.FC = () => {
 
   return (
     <div className="bg-white">
-      <section className="relative bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+      <section 
+        className="relative bg-cover bg-center bg-no-repeat text-white"
+        style={{ 
+          backgroundImage: "url('/images/Home page1.jpg')",
+          minHeight: '600px'
+        }}
+      >
+        {/* Dark overlay for better text visibility */}
+        <div className="absolute inset-0 bg-black/40"></div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               Connecting the World Through Trade
@@ -57,10 +59,10 @@ const Home: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/quote"
+                to="/products"
                 className="bg-[#FF6F4E] hover:bg-[#e55d3d] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg shadow-lg text-center"
               >
-                Get a Quote
+                View Our Products
               </Link>
               <Link
                 to="/contact"
@@ -71,7 +73,7 @@ const Home: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent z-10"></div>
       </section>
 
       <section className="py-16 bg-gray-50">
@@ -99,7 +101,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Product Categories</h2>
@@ -108,25 +110,7 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {productCategories.map((category, index) => (
-              <Link
-                key={index}
-                to="/products"
-                className="border border-gray-200 rounded-xl p-6 hover:border-[#2B58A0] hover:shadow-lg transition-all cursor-pointer group block"
-              >
-                <div className="flex items-start space-x-4">
-                  <Package className="h-8 w-8 text-[#FF6F4E] flex-shrink-0 group-hover:scale-110 transition-transform" />
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-[#2B58A0]">
-                      {category.title}
-                    </h3>
-                    <p className="text-gray-600">{category.description}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+          
 
           <div className="text-center mt-10">
             <Link
@@ -137,7 +121,7 @@ const Home: React.FC = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
