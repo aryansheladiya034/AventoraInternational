@@ -76,8 +76,8 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <div className="bg-white">
-      <section className="relative text-white overflow-hidden" style={{ minHeight: '600px' }}>
+    <div className="bg-white w-full overflow-x-hidden">
+      <section className="relative text-white overflow-hidden w-full" style={{ minHeight: '600px' }}>
         {/* Slideshow Images */}
         {heroImages.map((image, index) => (
           <div
@@ -314,8 +314,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Certificates Section with Scrolling Animation */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-16 bg-white w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Certifications</h2>
             <p className="text-lg text-gray-600">
@@ -324,108 +324,80 @@ const Home: React.FC = () => {
           </div>
 
           {/* Scrolling Container */}
-          <div className="relative">
+          <div className="relative overflow-hidden w-full">
             <div className="flex animate-scroll-certificates space-x-8">
               {/* First set of certificates */}
               <div className="flex space-x-8 flex-shrink-0">
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/Apeda-Logo.webp" 
-                    alt="APEDA Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/DGFT LOGO.jfif" 
-                    alt="DGFT Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/FIEO-Logo.webp" 
-                    alt="FIEO Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/FSSAI LOGO.png" 
+                    src="/images/certi/fssai.jpg" 
                     alt="FSSAI Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/G20.jfif" 
+                    src="/images/certi/g20.jpg" 
                     alt="G20 Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/MAKE IN INDIA.jpg" 
+                    src="/images/certi/make-in-india-logo-hd.png" 
                     alt="Make in India Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/MSME LOGO.png" 
+                    src="/images/certi/msme.webp" 
                     alt="MSME Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/certi/Spices_Board_of_India_Logo.png" 
+                    alt="Spices Board of India Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
               </div>
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-8 flex-shrink-0">
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/Apeda-Logo.webp" 
-                    alt="APEDA Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/DGFT LOGO.jfif" 
-                    alt="DGFT Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/FIEO-Logo.webp" 
-                    alt="FIEO Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                  <img 
-                    src="/images/CErtificate/FSSAI LOGO.png" 
+                    src="/images/certi/fssai.jpg" 
                     alt="FSSAI Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/G20.jfif" 
+                    src="/images/certi/g20.jpg" 
                     alt="G20 Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/MAKE IN INDIA.jpg" 
+                    src="/images/certi/make-in-india-logo-hd.png" 
                     alt="Make in India Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>
-                <div className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
-                    src="/images/CErtificate/MSME LOGO.png" 
+                    src="/images/certi/msme.webp" 
                     alt="MSME Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/certi/Spices_Board_of_India_Logo.png" 
+                    alt="Spices Board of India Certificate" 
                     className="max-w-full max-h-full object-contain"
                   />
                 </div>

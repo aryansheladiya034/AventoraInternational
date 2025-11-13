@@ -80,14 +80,14 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   return (
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
       {showAnnouncement && (
         <AnnouncementBanner onClose={handleCloseAnnouncement} />
       )}
       
-      <header className="bg-white shadow-md sticky top-0 z-50">
-        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
+      <header className="bg-white shadow-md sticky top-0 z-50 w-full">
+        <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div className="flex justify-between items-center h-20 w-full">
             <div
               className="flex items-center cursor-pointer"
               onClick={() => handleNavigation('/')}
@@ -159,7 +159,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
           </div>
 
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 space-y-2">
+            <div className="md:hidden py-4 space-y-2 w-full">
               {menuItems.map((item) => (
                 <div key={item.id}>
                   <button
@@ -199,7 +199,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         </nav>
       </header>
 
-      <main className="flex-grow">{children}</main>
+      <main className="flex-grow w-full overflow-x-hidden">{children}</main>
 
       <footer className="bg-[#2B58A0] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

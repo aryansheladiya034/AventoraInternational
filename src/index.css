@@ -2,6 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global Reset for Mobile */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Mobile specific fixes */
+@media (max-width: 768px) {
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .container, .max-w-7xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Announcement Banner Mobile Improvements */
+  .announcement-banner {
+    font-size: 0.875rem;
+  }
+  
+  .announcement-banner a {
+    word-break: break-all;
+  }
+}
+
+/* Announcement Banner Responsive Text */
+@media (max-width: 480px) {
+  .announcement-banner {
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+  
+  .announcement-banner .email-text {
+    display: none;
+  }
+  
+  .announcement-banner .email-text-short::after {
+    content: "info@aventora...";
+  }
+}
+
 /* Announcement Banner Scrolling Animation */
 @keyframes scroll {
   0% {
@@ -31,11 +90,17 @@
 }
 
 .animate-scroll-certificates {
-  animation: scrollCertificates 20s linear infinite;
+  animation: scrollCertificates 25s linear infinite;
+  will-change: transform;
 }
 
-.animate-scroll-certificates:hover {
-  animation-play-state: paused;
+/* Smooth certificate hover effects */
+.certificate-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.certificate-card:hover {
+  transform: translateY(-8px) scale(1.05);
 }
 
 /* Dropdown Animation */
