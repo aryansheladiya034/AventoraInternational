@@ -114,6 +114,20 @@ html, body {
   will-change: transform;
 }
 
+.animate-scroll-certificates:hover {
+  animation-play-state: paused;
+}
+
+/* Faster animation for improved mobile experience */
+.animate-scroll-certificates-fast {
+  animation: scrollCertificates 15s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-certificates-fast:hover {
+  animation-play-state: paused;
+}
+
 /* Smooth certificate hover effects */
 .certificate-card {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

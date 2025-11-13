@@ -4,10 +4,23 @@ import { Ship, Users, Zap, DollarSign,  Globe, Shield, ChevronLeft, ChevronRight
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [currentCertificateSlide, setCurrentCertificateSlide] = useState(0);
+  
   const heroImages = [
     '/images/home1.jpg',
     '/images/Home page2.jpg',
     '/images/home2 compostable.png',
+  ];
+
+  const certificates = [
+    { src: "/images/CErtificate/FIEO-Logo.webp", alt: "FIEO Certificate" },
+    { src: "/images/CErtificate/Apeda-Logo.webp", alt: "APEDA Certificate" },
+    { src: "/images/CErtificate/DGFT LOGO.jfif", alt: "DGFT Certificate" },
+    { src: "/images/certi/fssai.jpg", alt: "FSSAI Certificate" },
+    { src: "/images/certi/g20.jpg", alt: "G20 Certificate" },
+    { src: "/images/certi/make-in-india-logo-hd.png", alt: "Make in India Certificate" },
+    { src: "/images/certi/msme.webp", alt: "MSME Certificate" },
+    { src: "/images/certi/Spices_Board_of_India_Logo.png", alt: "Spices Board of India Certificate" }
   ];
 
   const heroContent = [
@@ -34,12 +47,28 @@ const Home: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentCertificateSlide((prev) => (prev + 1) % certificates.length);
+    }, 3000); // Change certificate slide every 3 seconds (faster)
+
+    return () => clearInterval(timer);
+  }, [certificates.length]);
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
+
+  const nextCertificateSlide = () => {
+    setCurrentCertificateSlide((prev) => (prev + 1) % certificates.length);
+  };
+
+  const prevCertificateSlide = () => {
+    setCurrentCertificateSlide((prev) => (prev - 1 + certificates.length) % certificates.length);
   };
   const keyServices = [
     {
@@ -313,9 +342,9 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Certificates Section with Scrolling Animation */}
+      {/* Certificates Section with Interactive Carousel */}
       <section className="py-16 bg-white w-full">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Certifications</h2>
             <p className="text-lg text-gray-600">
@@ -323,127 +352,86 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          {/* Scrolling Container */}
-          <div className="relative overflow-hidden w-full">
-            <div className="flex animate-scroll-certificates space-x-8">
+          {/* Desktop: Auto-scrolling carousel */}
+          <div className="hidden md:block relative overflow-hidden w-full">
+            <div className="flex animate-scroll-certificates-fast space-x-8">
               {/* First set of certificates */}
               <div className="flex space-x-8 flex-shrink-0">
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/FIEO-Logo.webp" 
-                    alt="FIEO Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/Apeda-Logo.webp" 
-                    alt="APEDA Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/DGFT LOGO.jfif" 
-                    alt="DGFT Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/fssai.jpg" 
-                    alt="FSSAI Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/g20.jpg" 
-                    alt="G20 Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/make-in-india-logo-hd.png" 
-                    alt="Make in India Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/msme.webp" 
-                    alt="MSME Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/Spices_Board_of_India_Logo.png" 
-                    alt="Spices Board of India Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
+                {certificates.map((cert, index) => (
+                  <div key={`first-${index}`} className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                    <img 
+                      src={cert.src}
+                      alt={cert.alt}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                ))}
               </div>
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-8 flex-shrink-0">
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/FIEO-Logo.webp" 
-                    alt="FIEO Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/Apeda-Logo.webp" 
-                    alt="APEDA Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/CErtificate/DGFT LOGO.jfif" 
-                    alt="DGFT Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/fssai.jpg" 
-                    alt="FSSAI Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/g20.jpg" 
-                    alt="G20 Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/make-in-india-logo-hd.png" 
-                    alt="Make in India Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/msme.webp" 
-                    alt="MSME Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
-                  <img 
-                    src="/images/certi/Spices_Board_of_India_Logo.png" 
-                    alt="Spices Board of India Certificate" 
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
+                {certificates.map((cert, index) => (
+                  <div key={`second-${index}`} className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
+                    <img 
+                      src={cert.src}
+                      alt={cert.alt}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                ))}
               </div>
+            </div>
+          </div>
+
+          {/* Mobile: Clickable carousel with arrows */}
+          <div className="md:hidden relative">
+            {/* Navigation arrows */}
+            <button
+              onClick={prevCertificateSlide}
+              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition-all"
+              aria-label="Previous certificate"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+              onClick={nextCertificateSlide}
+              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition-all"
+              aria-label="Next certificate"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Certificate display */}
+            <div className="overflow-hidden rounded-xl">
+              <div 
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentCertificateSlide * 100}%)` }}
+              >
+                {certificates.map((cert, index) => (
+                  <div key={index} className="w-full flex-shrink-0 px-4">
+                    <div className="bg-white rounded-xl shadow-lg p-8 mx-auto max-w-sm h-64 flex items-center justify-center">
+                      <img 
+                        src={cert.src}
+                        alt={cert.alt}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Slide indicators */}
+            <div className="flex justify-center mt-6 space-x-2">
+              {certificates.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentCertificateSlide(index)}
+                  className={`w-3 h-3 rounded-full transition-all ${
+                    index === currentCertificateSlide ? 'bg-[#FF6F4E] w-8' : 'bg-gray-300'
+                  }`}
+                  aria-label={`Go to certificate ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>
