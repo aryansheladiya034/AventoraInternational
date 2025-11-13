@@ -7,19 +7,33 @@ const ProductsOverview: React.FC = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-[#2B58A0] to-[#1e3f70] text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our Products
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
-            Premium quality agricultural products, spices, and eco-friendly solutions 
-            sourced globally and delivered with excellence
-          </p>
-          <div className="flex justify-center">
-            <Package className="h-16 w-16 text-[#FF6F4E] animate-bounce" />
+      
+      <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/Baki na pages ma.jpg')` }}
+        >
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Our Products
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto">
+              Premium quality agricultural products, spices, and eco-friendly solutions 
+              sourced globally and delivered with excellence
+            </p>
+            <div className="flex justify-center">
+              <Package className="h-16 w-16 text-[#FF6F4E] animate-bounce" />
+            </div>
           </div>
         </div>
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-gray-50 to-transparent z-10"></div>
       </section>
 
       {/* Products Categories */}

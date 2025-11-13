@@ -136,6 +136,7 @@ const Products: React.FC<ProductsProps> = ({ onNavigate }) => {
   return (
     <div className="bg-white">
       {/* Hero Section with Background Image */}
+      
       <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
         {/* Background Image */}
         <div

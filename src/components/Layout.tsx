@@ -265,7 +265,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             <div>
               <div className="flex items-center space-x-2 mb-4">
-                <Logo size="large" variant="white" />
+                <Logo size="medium" variant="white" />
               </div>
               <p className="text-base text-gray-200">
                 Connecting the world through trusted global trade solutions.
@@ -274,7 +274,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               
                  <div className="flex-1 flex items-center justify-start gap-4">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/share/1CpizuzXR7/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
@@ -301,7 +301,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <Instagram className="h-6 w-6" />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/company/aventora-international/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-3 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"

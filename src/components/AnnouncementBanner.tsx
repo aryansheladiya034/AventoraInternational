@@ -31,7 +31,7 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
         {/* Right side - Social media icons */}
         <div className="flex items-center gap-3">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/share/1CpizuzXR7/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"
@@ -58,7 +58,7 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
             <Instagram className="h-4 w-4" />
           </a>
           <a 
-            href="https://linkedin.com" 
+            href="https://www.linkedin.com/company/aventora-international/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 rounded-full bg-white/20 hover:bg-white hover:text-[#FF6F4E] transition-all duration-300"

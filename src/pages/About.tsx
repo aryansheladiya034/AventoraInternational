@@ -33,7 +33,7 @@ const About: React.FC = () => {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Baki na pages ma.jfif')` }}
+          style={{ backgroundImage: `url('/images/Baki na pages ma.jpg')` }}
         >
           {/* Dark overlay for better text visibility */}
           <div className="absolute inset-0 bg-black/40"></div>
@@ -136,47 +136,47 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 bg-gradient-to-br from-[#2B58A0] to-[#1e3f70]">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Achievements</h2>
-            <p className="text-lg text-gray-200">
+            <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">Our Achievements</h2>
+            <p className="text-lg text-black">
               Delivering excellence in global trade
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+            <div className="bg-[#2B58A0] rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300 text-white">
               <div className="flex justify-center mb-4">
                 <Package className="h-16 w-16 text-[#FF6F4E]" />
               </div>
-              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">120+</h3>
-              <p className="text-xl font-semibold text-gray-800 mb-2">Consignments</p>
-              <p className="text-gray-600">Successfully delivered worldwide</p>
+              <h3 className="text-4xl font-bold text-white mb-2">120+</h3>
+              <p className="text-xl font-semibold text-white mb-2">Consignments</p>
+              <p className="text-white">Successfully delivered worldwide</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+            <div className="bg-[#2B58A0] rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300 text-white ">
               <div className="flex justify-center mb-4">
                 <Smile className="h-16 w-16 text-[#FF6F4E]" />
               </div>
-              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">40+</h3>
-              <p className="text-xl font-semibold text-gray-800 mb-2">Happy Buyers</p>
-              <p className="text-gray-600">Trusted partners globally</p>
+              <h3 className="text-4xl font-bold text-white mb-2">40+</h3>
+              <p className="text-xl font-semibold text-white mb-2">Happy Buyers</p>
+              <p className="text-white">Trusted partners globally</p>
             </div>
 
-            <div className="bg-white rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300">
+            <div className="bg-[#2B58A0] rounded-xl p-8 text-center shadow-xl hover:shadow-2xl transition-shadow transform hover:-translate-y-1 duration-300 text-white">
               <div className="flex justify-center mb-4">
                 <Calendar className="h-16 w-16 text-[#FF6F4E]" />
               </div>
-              <h3 className="text-4xl font-bold text-[#2B58A0] mb-2">7+</h3>
-              <p className="text-xl font-semibold text-gray-800 mb-2">Years of Experience</p>
-              <p className="text-gray-600">In international trade</p>
+              <h3 className="text-4xl font-bold text-white mb-2">7+</h3>
+              <p className="text-xl font-semibold text-white mb-2">Years of Experience</p>
+              <p className="text-white">In international trade</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-[#2B58A0] text-white">
+      <section className="py-16 bg-gradient-to-br from-[#2B58A0] to-[#1e3f70] text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work Together?</h2>
           <p className="text-xl mb-8 text-gray-100">
@@ -184,7 +184,7 @@ const About: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-white hover:bg-[#2B58A0] text-[#2B58A0] hover:text-white hover:border-white border font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
+            className="bg-orange-400 hover:bg-white text-white hover:text-orange-400  font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
           >
             Get in Touch
           </Link>
