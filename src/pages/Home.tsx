@@ -330,6 +330,27 @@ const Home: React.FC = () => {
               <div className="flex space-x-8 flex-shrink-0">
                 <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
+                    src="/images/CErtificate/FIEO-Logo.webp" 
+                    alt="FIEO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/CErtificate/Apeda-Logo.webp" 
+                    alt="APEDA Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/CErtificate/DGFT LOGO.jfif" 
+                    alt="DGFT Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
                     src="/images/certi/fssai.jpg" 
                     alt="FSSAI Certificate" 
                     className="max-w-full max-h-full object-contain"
@@ -366,6 +387,27 @@ const Home: React.FC = () => {
               </div>
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-8 flex-shrink-0">
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/CErtificate/FIEO-Logo.webp" 
+                    alt="FIEO Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/CErtificate/Apeda-Logo.webp" 
+                    alt="APEDA Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
+                <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
+                  <img 
+                    src="/images/CErtificate/DGFT LOGO.jfif" 
+                    alt="DGFT Certificate" 
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
                 <div className="certificate-card w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl">
                   <img 
                     src="/images/certi/fssai.jpg" 

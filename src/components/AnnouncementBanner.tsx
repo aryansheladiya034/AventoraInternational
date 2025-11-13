@@ -9,27 +9,45 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
   return (
     <div className="bg-gradient-to-r from-[#FF6F4E] to-[#ff8a6d] text-white announcement-banner">
       <div className="px-3 sm:px-4 py-2 sm:py-3">
-        {/* Mobile: Stack vertically, Desktop: Side by side */}
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-8">
+        {/* Single row layout */}
+        <div className="flex items-center justify-between">
           {/* Contact info */}
-          <div className="flex flex-col xs:flex-row items-start xs:items-center gap-2 xs:gap-4 sm:gap-6">
+          <div className="flex items-center gap-3 sm:gap-6">
+            {/* Phone */}
             <a 
               href="tel:+917698107075" 
-              className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity"
+              className="group relative flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity touch-manipulation"
+              tabIndex={0}
             >
-              <Phone className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base whitespace-nowrap">+91 76981 07075</span>
+              <Phone className="h-4 w-4 sm:h-4 sm:w-4 lg:h-5 lg:w-5 flex-shrink-0" />
+              <span className="hidden sm:inline text-xs sm:text-sm lg:text-base whitespace-nowrap">+91 76981 07075</span>
+              
+              {/* Mobile hover/touch tooltip */}
+              <div className="sm:hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-all duration-300 pointer-events-none z-50 shadow-lg">
+                +91 76981 07075
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-4 border-transparent border-t-black/90"></div>
+              </div>
             </a>
-            <span className="hidden xs:block font-bold text-xs sm:text-sm">|</span>
+
+            <span className="hidden sm:block font-bold text-xs sm:text-sm">|</span>
+
+            {/* Email */}
             <a 
               href="mailto:info@aventorainternational.com" 
-              className="flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity"
+              className="group relative flex items-center gap-1.5 sm:gap-2 hover:opacity-80 transition-opacity touch-manipulation"
+              tabIndex={0}
             >
-              <Mail className="h-3 w-3 sm:h-4 sm:w-4 lg:h-5 lg:w-5 flex-shrink-0" />
-              <span className="text-xs sm:text-sm lg:text-base">
-                <span className="hidden sm:inline">info@aventorainternational.com</span>
-                <span className="sm:hidden">info@aventora...</span>
+              <Mail className="h-4 w-4 sm:h-4 sm:w-4 lg:h-5 lg:w-5 flex-shrink-0" />
+              <span className="hidden sm:inline text-xs sm:text-sm lg:text-base">
+                <span className="hidden md:inline">info@aventorainternational.com</span>
+                <span className="md:hidden">info@aventora...</span>
               </span>
+              
+              {/* Mobile hover/touch tooltip */}
+              <div className="sm:hidden absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-2 bg-black/90 text-white text-xs rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 group-focus:opacity-100 group-active:opacity-100 transition-all duration-300 pointer-events-none z-50 shadow-lg">
+                info@aventorainternational.com
+                <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-2 border-r-2 border-t-4 border-transparent border-t-black/90"></div>
+              </div>
             </a>
           </div>
           

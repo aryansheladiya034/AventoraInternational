@@ -43,21 +43,41 @@ html, body {
   .announcement-banner a {
     word-break: break-all;
   }
+
+  /* Mobile tooltip improvements */
+  .announcement-banner .group:active .opacity-0 {
+    opacity: 1 !important;
+  }
+
+  /* Ensure tooltips appear on touch */
+  .announcement-banner .group:focus-within .opacity-0,
+  .announcement-banner .group:hover .opacity-0 {
+    opacity: 1;
+  }
+}
+
+/* Tooltip styling */
+.announcement-banner .group .opacity-0 {
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1000;
 }
 
 /* Announcement Banner Responsive Text */
 @media (max-width: 480px) {
   .announcement-banner {
     font-size: 0.75rem;
-    padding: 0.5rem;
+    padding: 0.25rem;
   }
   
-  .announcement-banner .email-text {
-    display: none;
+  /* Ensure single line layout */
+  .announcement-banner > div > div {
+    gap: 0.5rem !important;
   }
-  
-  .announcement-banner .email-text-short::after {
-    content: "info@aventora...";
+
+  /* Make tooltips more visible on very small screens */
+  .announcement-banner .group:active .opacity-0 {
+    opacity: 1 !important;
+    transform: translateY(-2px);
   }
 }
 
