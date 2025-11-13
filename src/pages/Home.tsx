@@ -5,6 +5,7 @@ import { Ship, Users, Zap, DollarSign,  Globe, Shield, ChevronLeft, ChevronRight
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [currentCertificateSlide, setCurrentCertificateSlide] = useState(0);
+  const [certificatesPerView, setCertificatesPerView] = useState(1);
   
   const heroImages = [
     '/images/home1.jpg',
@@ -22,6 +23,21 @@ const Home: React.FC = () => {
     { src: "/images/certi/msme.webp", alt: "MSME Certificate" },
     { src: "/images/certi/Spices_Board_of_India_Logo.png", alt: "Spices Board of India Certificate" }
   ];
+
+  // Calculate certificates per view based on screen size
+  useEffect(() => {
+    const updateCertificatesPerView = () => {
+      const width = window.innerWidth;
+      if (width >= 1024) setCertificatesPerView(4); // lg
+      else if (width >= 768) setCertificatesPerView(3); // md
+      else if (width >= 640) setCertificatesPerView(2); // sm
+      else setCertificatesPerView(1); // mobile
+    };
+
+    updateCertificatesPerView();
+    window.addEventListener('resize', updateCertificatesPerView);
+    return () => window.removeEventListener('resize', updateCertificatesPerView);
+  }, []);
 
   const heroContent = [
     {
@@ -49,11 +65,12 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentCertificateSlide((prev) => (prev + 1) % certificates.length);
-    }, 3000); // Change certificate slide every 3 seconds (faster)
+      const maxSlides = Math.ceil(certificates.length / certificatesPerView);
+      setCurrentCertificateSlide((prev) => (prev + 1) % maxSlides);
+    }, 4000); // Change certificate slide every 4 seconds
 
     return () => clearInterval(timer);
-  }, [certificates.length]);
+  }, [certificates.length, certificatesPerView]);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length);
@@ -64,11 +81,13 @@ const Home: React.FC = () => {
   };
 
   const nextCertificateSlide = () => {
-    setCurrentCertificateSlide((prev) => (prev + 1) % certificates.length);
+    const maxSlides = Math.ceil(certificates.length / certificatesPerView);
+    setCurrentCertificateSlide((prev) => (prev + 1) % maxSlides);
   };
 
   const prevCertificateSlide = () => {
-    setCurrentCertificateSlide((prev) => (prev - 1 + certificates.length) % certificates.length);
+    const maxSlides = Math.ceil(certificates.length / certificatesPerView);
+    setCurrentCertificateSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
   };
   const keyServices = [
     {
@@ -342,7 +361,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Certificates Section with Interactive Carousel */}
+      {/* Certificates Section with Button Navigation */}
       <section className="py-16 bg-white w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -352,63 +371,33 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          {/* Desktop: Auto-scrolling carousel */}
-          <div className="hidden md:block relative overflow-hidden w-full">
-            <div className="flex animate-scroll-certificates-fast space-x-8">
-              {/* First set of certificates */}
-              <div className="flex space-x-8 flex-shrink-0">
-                {certificates.map((cert, index) => (
-                  <div key={`first-${index}`} className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                    <img 
-                      src={cert.src}
-                      alt={cert.alt}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-              {/* Duplicate set for seamless loop */}
-              <div className="flex space-x-8 flex-shrink-0">
-                {certificates.map((cert, index) => (
-                  <div key={`second-${index}`} className="w-64 h-64 bg-white rounded-xl shadow-lg p-6 flex items-center justify-center hover:shadow-2xl transition-shadow">
-                    <img 
-                      src={cert.src}
-                      alt={cert.alt}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: Clickable carousel with arrows */}
-          <div className="md:hidden relative">
+          {/* Button-controlled carousel for all devices */}
+          <div className="relative">
             {/* Navigation arrows */}
             <button
               onClick={prevCertificateSlide}
-              className="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition-all"
+              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all"
               aria-label="Previous certificate"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
             </button>
             <button
               onClick={nextCertificateSlide}
-              className="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-3 rounded-full transition-all"
+              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all"
               aria-label="Next certificate"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
             </button>
 
-            {/* Certificate display */}
+            {/* Certificate display - responsive */}
             <div className="overflow-hidden rounded-xl">
               <div 
                 className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentCertificateSlide * 100}%)` }}
+                style={{ transform: `translateX(-${currentCertificateSlide * (100 / certificatesPerView)}%)` }}
               >
                 {certificates.map((cert, index) => (
-                  <div key={index} className="w-full flex-shrink-0 px-4">
-                    <div className="bg-white rounded-xl shadow-lg p-8 mx-auto max-w-sm h-64 flex items-center justify-center">
+                  <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-2 md:px-4">
+                    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mx-auto h-48 md:h-64 flex items-center justify-center hover:shadow-xl transition-shadow">
                       <img 
                         src={cert.src}
                         alt={cert.alt}
@@ -422,14 +411,14 @@ const Home: React.FC = () => {
 
             {/* Slide indicators */}
             <div className="flex justify-center mt-6 space-x-2">
-              {certificates.map((_, index) => (
+              {Array.from({ length: Math.ceil(certificates.length / certificatesPerView) }).map((_, index) => (
                 <button
                   key={index}
                   onClick={() => setCurrentCertificateSlide(index)}
                   className={`w-3 h-3 rounded-full transition-all ${
                     index === currentCertificateSlide ? 'bg-[#FF6F4E] w-8' : 'bg-gray-300'
                   }`}
-                  aria-label={`Go to certificate ${index + 1}`}
+                  aria-label={`Go to certificate slide ${index + 1}`}
                 />
               ))}
             </div>
