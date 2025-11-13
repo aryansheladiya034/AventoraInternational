@@ -64,7 +64,7 @@ const Contact: React.FC<ContactProps> = ({ onSubmit }) => {
         {/* Content */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Baki na pages ma.jpg')` }}
+          style={{ backgroundImage: `url('/images/All page photo2.jpg')` }}
         >
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="text-center max-w-4xl mx-auto">

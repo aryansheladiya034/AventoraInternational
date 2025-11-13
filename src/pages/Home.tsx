@@ -5,9 +5,9 @@ import { Ship, Users, Zap, DollarSign,  Globe, Shield, ChevronLeft, ChevronRight
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const heroImages = [
-    '/images/Home page1.jpg',
+    '/images/home1.jpg',
     '/images/Home page2.jpg',
-    '/images/Home page3.jpg',
+    '/images/home2 compostable.png',
   ];
 
   const heroContent = [
@@ -126,10 +126,10 @@ const Home: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center h-full">
             {/* Left side - Content */}
             <div className="text-left">
-              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-[#FF6F4E]">
+              <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight text-white">
                 {heroContent[currentSlide].title}
               </h1>
-              <p className="text-sm md:text-base lg:text-lg text-gray-100">
+              <p className="text-sm md:text-base lg:text-lg text-red-400">
                 {heroContent[currentSlide].description}
               </p>
             </div>

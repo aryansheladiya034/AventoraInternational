@@ -12,6 +12,7 @@ import { compostablePlatesProducts } from './compostablePlates';
 import { compostableBowlsProducts } from './compostableBowls';
 import { clamShellProducts } from './clamShells';
 import { compostableAccessoriesProducts } from './compostableAccessories';
+import { compostableBagsBottlesProducts } from './compostableBagsBottles';
 
 
 // Create a copy of the base product data
@@ -111,6 +112,12 @@ if (compostableTableware) {
   const cupsAndCutlerySubCategory = compostableTableware.subCategories.find(sub => sub.id === 'compostable-cups-cutlery');
   if (cupsAndCutlerySubCategory) {
     cupsAndCutlerySubCategory.products = compostableAccessoriesProducts;
+  }
+  
+  // Update bags & bottles
+  const bagsBottlesSubCategory = compostableTableware.subCategories.find(sub => sub.id === 'compostable-bags-bottles');
+  if (bagsBottlesSubCategory) {
+    bagsBottlesSubCategory.products = compostableBagsBottlesProducts;
   }
 }
 

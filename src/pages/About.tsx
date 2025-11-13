@@ -32,8 +32,8 @@ const About: React.FC = () => {
       <section className="relative text-white overflow-hidden" style={{ minHeight: '400px' }}>
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Baki na pages ma.jpg')` }}
+          className="absolute inset-0 bg-cover bg-right "
+          style={{ backgroundImage: `url('/images/All page photo2.jpg')` }}
         >
           {/* Dark overlay for better text visibility */}
           <div className="absolute inset-0 bg-black/40"></div>
@@ -184,7 +184,7 @@ const About: React.FC = () => {
           </p>
           <Link
             to="/contact"
-            className="bg-orange-400 hover:bg-white text-white hover:text-orange-400  font-semibold px-8 py-4 rounded-lg transition-colors text-lg inline-block"
+            className="bg-[#FF6F4E] hover:bg-[#e55d3d] text-white font-semibold px-8 py-4 rounded-lg transition-colors text-lg text-center"
           >
             Get in Touch
           </Link>

@@ -61,109 +61,55 @@ const CategoryPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Subcategories */}
-      <section className="py-20">
+      {/* Products by Category */}
+      <section className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Browse by Category
-            </h2>
-            <p className="text-xl text-gray-600">
-              Explore our {category.name.toLowerCase()} subcategories and products
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {category.subCategories.map((subCategory) => (
-              <div
-                key={subCategory.id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-200"
-              >
-                <div className="p-6">
-                  <div className="flex items-start justify-between mb-4">
-                    <h3 className="text-xl font-bold text-gray-900">
-                      {subCategory.name}
-                    </h3>
-                    <Package className="h-6 w-6 text-[#FF6F4E]" />
-                  </div>
-
-                  <p className="text-gray-600 mb-6">
-                    {subCategory.description}
-                  </p>
-
-                  <div className="space-y-2 mb-6">
-                    <h4 className="font-semibold text-gray-900 text-sm">Products:</h4>
-                    <div className="grid grid-cols-1 gap-2">
-                      {subCategory.products.slice(0, 4).map((product) => (
-                        <Link
-                          key={product.id}
-                          to={`/products/${categorySlug}/${subCategory.slug}/${product.slug}`}
-                          className="flex items-center justify-between p-2 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                        >
-                          <span className="text-sm text-gray-700">{product.name}</span>
-                          <ArrowRight className="h-3 w-3 text-gray-400" />
-                        </Link>
-                      ))}
-                      {subCategory.products.length > 4 && (
-                        <p className="text-xs text-gray-500 p-2">
-                          +{subCategory.products.length - 4} more products
-                        </p>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between text-sm">
-                    <span className="text-gray-500">
-                      {subCategory.products.length} products
-                    </span>
-                    <Link
-                      to={`/products/${categorySlug}/${subCategory.slug}`}
-                      className="text-[#2B58A0] hover:text-[#1e3f70] font-medium transition-colors"
-                    >
-                      View All →
-                    </Link>
-                  </div>
-                </div>
+          {category.subCategories.map((subCategory, index) => (
+            <div key={subCategory.id} className={index > 0 ? 'mt-16' : ''}>
+              <div className="mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-2 uppercase tracking-wide">
+                  {subCategory.name}
+                </h2>
+                <p className="text-gray-600 mb-6">
+                  {subCategory.description}
+                </p>
+                <div className="w-20 h-1 bg-gradient-to-r from-[#FF6F4E] to-[#2B58A0] rounded-full"></div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* All Products List */}
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
-            All {category.name} Products
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {category.subCategories.flatMap(subCategory =>
-              subCategory.products.map((product) => (
-                <Link
-                  key={product.id}
-                  to={`/products/${categorySlug}/${subCategory.slug}/${product.slug}`}
-                  className="group bg-white border border-gray-200 rounded-lg p-4 hover:border-[#FF6F4E] hover:shadow-md transition-all"
-                >
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-32 object-cover rounded-md mb-3"
-                  />
-                  <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#2B58A0] transition-colors line-clamp-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">
-                    {product.description}
-                  </p>
-                  <div className="flex items-center justify-between text-xs text-gray-500">
-                    <span>{product.features.length} features</span>
-                    <ArrowRight className="h-3 w-3 group-hover:text-[#FF6F4E] transition-colors" />
-                  </div>
-                </Link>
-              ))
-            )}
-          </div>
+              {subCategory.products.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                  {subCategory.products.map((product) => (
+                    <Link
+                      key={product.id}
+                      to={`/products/${categorySlug}/${subCategory.slug}/${product.slug}`}
+                      className="group bg-white border border-gray-200 rounded-lg p-4 hover:border-[#FF6F4E] hover:shadow-md transition-all"
+                    >
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-32 object-cover rounded-md mb-3"
+                      />
+                      <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-[#2B58A0] transition-colors line-clamp-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-3 line-clamp-2">
+                        {product.description}
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500">
+                        <span>{product.features.length} features</span>
+                        <ArrowRight className="h-3 w-3 group-hover:text-[#FF6F4E] transition-colors" />
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center py-8 text-gray-500">
+                  <Package className="h-12 w-12 mx-auto mb-4 text-gray-300" />
+                  <p>No products available in this category yet.</p>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </section>
 

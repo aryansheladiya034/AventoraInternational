@@ -14,7 +14,6 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [dropdownAnimating, setDropdownAnimating] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -58,30 +57,26 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     // Auto-close dropdown when navigation happens
     setProductsDropdownOpen(false);
     setDropdownAnimating(false);
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
-    }
+  };
+
+  const handleProductsClick = () => {
+    // Only toggle dropdown when Products button is clicked - no navigation
+    setProductsDropdownOpen(!productsDropdownOpen);
+    setDropdownAnimating(!productsDropdownOpen);
   };
 
   const handleMouseEnter = () => {
-    if (dropdownTimeout) {
-      clearTimeout(dropdownTimeout);
-      setDropdownTimeout(null);
+    // Only open if not already open
+    if (!productsDropdownOpen) {
+      setDropdownAnimating(true);
+      setProductsDropdownOpen(true);
     }
-    setDropdownAnimating(true);
-    setProductsDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
-    const timeout = setTimeout(() => {
-      setDropdownAnimating(false);
-      // Small delay to allow animation to complete
-      setTimeout(() => {
-        setProductsDropdownOpen(false);
-      }, 300);
-    }, 1500); // 1.5 seconds delay before closing
-    setDropdownTimeout(timeout);
+    // Immediately close the dropdown without delay
+    setDropdownAnimating(false);
+    setProductsDropdownOpen(false);
   };
 
   return (
@@ -110,7 +105,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                     onMouseLeave={handleMouseLeave}
                   >
                     <button
-                      onClick={() => handleNavigation(item.id)}
+                      onClick={handleProductsClick}
                       className={`text-base font-bold transition-colors flex items-center gap-1 uppercase ${
                         location.pathname.startsWith('/products')
                           ? 'text-[#2B58A0] border-b-2 border-[#FF6F4E]'

@@ -12,7 +12,7 @@ const ProductsOverview: React.FC = () => {
         {/* Background Image */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/Baki na pages ma.jpg')` }}
+          style={{ backgroundImage: `url('/images/All page photo2.jpg')` }}
         >
           {/* Dark overlay for better text visibility */}
           <div className="absolute inset-0 bg-black/40"></div>
