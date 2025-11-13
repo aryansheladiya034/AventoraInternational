@@ -29,7 +29,7 @@ const AnnouncementBanner: React.FC<AnnouncementBannerProps> = () => {
               </div>
             </a>
 
-            <span className="hidden sm:block font-bold text-xs sm:text-sm">|</span>
+            <span className="font-bold text-xs sm:text-sm">|</span>
 
             {/* Email */}
             <a 
