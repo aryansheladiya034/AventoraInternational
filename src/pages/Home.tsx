@@ -4,8 +4,6 @@ import { Ship, Users, Zap, DollarSign,  Globe, Shield, ChevronLeft, ChevronRight
 
 const Home: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [currentCertificateSlide, setCurrentCertificateSlide] = useState(0);
-  const [certificatesPerView, setCertificatesPerView] = useState(1);
   
   const heroImages = [
     '/images/home1.jpg',
@@ -16,28 +14,12 @@ const Home: React.FC = () => {
   const certificates = [
     { src: "/images/CErtificate/FIEO-Logo.webp", alt: "FIEO Certificate" },
     { src: "/images/CErtificate/Apeda-Logo.webp", alt: "APEDA Certificate" },
+    { src: "/images/certi/msme.webp", alt: "MSME Certificate" },
     { src: "/images/CErtificate/DGFT LOGO.jfif", alt: "DGFT Certificate" },
     { src: "/images/certi/fssai.jpg", alt: "FSSAI Certificate" },
     { src: "/images/certi/g20.jpg", alt: "G20 Certificate" },
-    { src: "/images/certi/make-in-india-logo-hd.png", alt: "Make in India Certificate" },
-    { src: "/images/certi/msme.webp", alt: "MSME Certificate" },
-    { src: "/images/certi/Spices_Board_of_India_Logo.png", alt: "Spices Board of India Certificate" }
+    { src: "/images/certi/make-in-india-logo-hd.png", alt: "Make in India Certificate" }
   ];
-
-  // Calculate certificates per view based on screen size
-  useEffect(() => {
-    const updateCertificatesPerView = () => {
-      const width = window.innerWidth;
-      if (width >= 1024) setCertificatesPerView(4); // lg
-      else if (width >= 768) setCertificatesPerView(3); // md
-      else if (width >= 640) setCertificatesPerView(2); // sm
-      else setCertificatesPerView(1); // mobile
-    };
-
-    updateCertificatesPerView();
-    window.addEventListener('resize', updateCertificatesPerView);
-    return () => window.removeEventListener('resize', updateCertificatesPerView);
-  }, []);
 
   const heroContent = [
     {
@@ -63,15 +45,6 @@ const Home: React.FC = () => {
     return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      const maxSlides = Math.ceil(certificates.length / certificatesPerView);
-      setCurrentCertificateSlide((prev) => (prev + 1) % maxSlides);
-    }, 4000); // Change certificate slide every 4 seconds
-
-    return () => clearInterval(timer);
-  }, [certificates.length, certificatesPerView]);
-
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % heroImages.length);
   };
@@ -80,15 +53,6 @@ const Home: React.FC = () => {
     setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
   };
 
-  const nextCertificateSlide = () => {
-    const maxSlides = Math.ceil(certificates.length / certificatesPerView);
-    setCurrentCertificateSlide((prev) => (prev + 1) % maxSlides);
-  };
-
-  const prevCertificateSlide = () => {
-    const maxSlides = Math.ceil(certificates.length / certificatesPerView);
-    setCurrentCertificateSlide((prev) => (prev - 1 + maxSlides) % maxSlides);
-  };
   const keyServices = [
     {
       icon: <Ship className="h-12 w-12 text-[#2B58A0]" />,
@@ -361,7 +325,7 @@ const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Certificates Section with Button Navigation */}
+      {/* Certificates Section */}
       <section className="py-16 bg-white w-full">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -371,57 +335,33 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          {/* Button-controlled carousel for all devices */}
-          <div className="relative">
-            {/* Navigation arrows */}
-            <button
-              onClick={prevCertificateSlide}
-              className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all"
-              aria-label="Previous certificate"
-            >
-              <ChevronLeft className="h-5 w-5 md:h-6 md:w-6" />
-            </button>
-            <button
-              onClick={nextCertificateSlide}
-              className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 md:p-3 rounded-full transition-all"
-              aria-label="Next certificate"
-            >
-              <ChevronRight className="h-5 w-5 md:h-6 md:w-6" />
-            </button>
-
-            {/* Certificate display - responsive */}
-            <div className="overflow-hidden rounded-xl">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentCertificateSlide * (100 / certificatesPerView)}%)` }}
-              >
-                {certificates.map((cert, index) => (
-                  <div key={index} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 flex-shrink-0 px-2 md:px-4">
-                    <div className="bg-white rounded-xl shadow-lg p-4 md:p-6 mx-auto h-48 md:h-64 flex items-center justify-center hover:shadow-xl transition-shadow">
-                      <img 
-                        src={cert.src}
-                        alt={cert.alt}
-                        className="max-w-full max-h-full object-contain"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Slide indicators */}
-            <div className="flex justify-center mt-6 space-x-2">
-              {Array.from({ length: Math.ceil(certificates.length / certificatesPerView) }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentCertificateSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    index === currentCertificateSlide ? 'bg-[#FF6F4E] w-8' : 'bg-gray-300'
-                  }`}
-                  aria-label={`Go to certificate slide ${index + 1}`}
-                />
+          {/* Mobile: Horizontal Scroll - Desktop: Grid */}
+          {/* Mobile View - Horizontal Scroll */}
+          <div className="block md:hidden overflow-x-auto scrollbar-hide pb-4">
+            <div className="flex gap-4 px-2" style={{ width: 'max-content' }}>
+              {certificates.map((cert, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-4 w-64 h-48 flex items-center justify-center hover:shadow-xl transition-shadow certificate-card flex-shrink-0">
+                  <img 
+                    src={cert.src}
+                    alt={cert.alt}
+                    className="max-w-full max-h-full object-contain"
+                  />
+                </div>
               ))}
             </div>
+          </div>
+
+          {/* Desktop View - Grid */}
+          <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {certificates.map((cert, index) => (
+              <div key={index} className="bg-white rounded-xl shadow-lg p-4 md:p-6 h-48 md:h-64 flex items-center justify-center hover:shadow-xl transition-shadow certificate-card">
+                <img 
+                  src={cert.src}
+                  alt={cert.alt}
+                  className="max-w-full max-h-full object-contain"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>
