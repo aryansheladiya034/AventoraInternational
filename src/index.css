@@ -142,9 +142,9 @@ html, body {
 }
 
 .dropdown-enter {
-  animation: dropdownFadeIn 0.15s ease-out forwards;
+  animation: dropdownFadeIn 0.3s ease-out forwards;
 }
 
 .dropdown-exit {
-  animation: dropdownFadeOut 0.1s ease-out forwards;
+  animation: dropdownFadeOut 0.25s ease-out forwards;
 }

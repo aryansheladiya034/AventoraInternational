@@ -335,33 +335,55 @@ const Home: React.FC = () => {
             </p>
           </div>
 
-          {/* Mobile: Horizontal Scroll - Desktop: Grid */}
-          {/* Mobile View - Horizontal Scroll */}
-          <div className="block md:hidden overflow-x-auto scrollbar-hide pb-4">
-            <div className="flex gap-4 px-2" style={{ width: 'max-content' }}>
-              {certificates.map((cert, index) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-4 w-64 h-48 flex items-center justify-center hover:shadow-xl transition-shadow certificate-card flex-shrink-0">
-                  <img 
-                    src={cert.src}
-                    alt={cert.alt}
-                    className="max-w-full max-h-full object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          {/* Horizontal Scroll for All Devices with Navigation Buttons */}
+          <div className="relative">
+            {/* Left Navigation Button */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('certificate-scroll');
+                if (container) {
+                  container.scrollBy({ left: -300, behavior: 'smooth' });
+                }
+              }}
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-[#2B58A0] hover:bg-[#1e3f70] text-white p-3 rounded-full shadow-lg transition-all hidden md:block"
+              aria-label="Scroll left"
+            >
+              <ChevronLeft className="h-6 w-6" />
+            </button>
 
-          {/* Desktop View - Grid */}
-          <div className="hidden md:grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {certificates.map((cert, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-4 md:p-6 h-48 md:h-64 flex items-center justify-center hover:shadow-xl transition-shadow certificate-card">
-                <img 
-                  src={cert.src}
-                  alt={cert.alt}
-                  className="max-w-full max-h-full object-contain"
-                />
+            {/* Right Navigation Button */}
+            <button
+              onClick={() => {
+                const container = document.getElementById('certificate-scroll');
+                if (container) {
+                  container.scrollBy({ left: 300, behavior: 'smooth' });
+                }
+              }}
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-[#2B58A0] hover:bg-[#1e3f70] text-white p-3 rounded-full shadow-lg transition-all hidden md:block"
+              aria-label="Scroll right"
+            >
+              <ChevronRight className="h-6 w-6" />
+            </button>
+
+            <div 
+              id="certificate-scroll"
+              className="overflow-x-auto pb-4 scrollbar-hide" 
+              style={{ 
+                WebkitOverflowScrolling: 'touch'
+              }}
+            >
+              <div className="flex gap-4 md:gap-6 px-2" style={{ width: 'max-content' }}>
+                {certificates.map((cert, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-lg p-4 w-64 h-48 flex items-center justify-center hover:shadow-xl transition-shadow certificate-card flex-shrink-0">
+                    <img 
+                      src={cert.src}
+                      alt={cert.alt}
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

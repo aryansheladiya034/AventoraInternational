@@ -14,6 +14,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [showAnnouncement, setShowAnnouncement] = useState(true);
   const [productsDropdownOpen, setProductsDropdownOpen] = useState(false);
   const [dropdownAnimating, setDropdownAnimating] = useState(false);
+  const [closeTimeout, setCloseTimeout] = useState<NodeJS.Timeout | null>(null);
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -66,6 +67,11 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const handleMouseEnter = () => {
+    // Clear any pending close timeout
+    if (closeTimeout) {
+      clearTimeout(closeTimeout);
+      setCloseTimeout(null);
+    }
     // Only open if not already open
     if (!productsDropdownOpen) {
       setDropdownAnimating(true);
@@ -74,9 +80,12 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   };
 
   const handleMouseLeave = () => {
-    // Immediately close the dropdown without delay
-    setDropdownAnimating(false);
-    setProductsDropdownOpen(false);
+    // Add a delay before closing the dropdown
+    const timeout = setTimeout(() => {
+      setDropdownAnimating(false);
+      setProductsDropdownOpen(false);
+    }, 300); // 300ms delay
+    setCloseTimeout(timeout);
   };
 
   return (
